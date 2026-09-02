@@ -1,0 +1,22 @@
+name: Quality gate
+
+on:
+  pull_request:
+  push:
+    branches-ignore: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - run: npm test
+      - run: npm run docs:matrix
+      - run: git diff --exit-code docs/CONTENT_COMPLETENESS_MATRIX.md docs/CALCULATOR_COMPLETENESS_MATRIX.md
