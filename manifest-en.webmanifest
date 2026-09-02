@@ -1,0 +1,24 @@
+{
+  "id":"./index.html?lang=en",
+  "name":"MARKOVLAB — a personal laboratory for measurable progress",
+  "short_name":"MARKOVLAB",
+  "description":"A personal laboratory for measurable progress with transparent formulas, visible limitations and local data.",
+  "start_url":"./index.html#home",
+  "scope":"./",
+  "display":"standalone",
+  "display_override":["window-controls-overlay","standalone"],
+  "orientation":"any",
+  "background_color":"#f5f4ee",
+  "theme_color":"#173f37",
+  "lang":"en",
+  "categories":["health","fitness","productivity","finance","utilities"],
+  "shortcuts":[
+    {"name":"Open the laboratory","short_name":"Laboratory","description":"Find a calculation by task or domain","url":"./index.html#calculators","icons":[{"src":"./assets/icons/icon-192.png","sizes":"192x192","type":"image/png"}]},
+    {"name":"Personal profile","short_name":"Profile","description":"Edit local reusable data","url":"./index.html#profile","icons":[{"src":"./assets/icons/icon-192.png","sizes":"192x192","type":"image/png"}]}
+  ],
+  "icons":[
+    {"src":"./assets/icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
+    {"src":"./assets/icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"},
+    {"src":"./assets/icons/icon-maskable-512.png","sizes":"512x512","type":"image/png","purpose":"maskable"}
+  ]
+}

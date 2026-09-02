@@ -1,0 +1,10 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { normalizeImport } from '../assets/js/validators.js';
+import { exportState, importState } from '../assets/js/storage.js';
+const ids=new Set(['bmi','mifflin']);
+test('import allowlists profile and calculator IDs',()=>{const out=normalizeImport({version:1,lang:'en',theme:'midnight',profile:{weight:80,name:'<img>',age:'35'},favorites:['bmi','evil'],history:[{calcId:'mifflin',summary:'ok',inputs:{weight:80,evil:'x'}},{calcId:'evil'}],unknown:'x'},ids);assert.deepEqual(out.profile,{weight:80,age:35});assert.deepEqual(out.favorites,['bmi']);assert.equal(out.history.length,1);assert.equal(out.unknown,undefined)});
+test('future versions are rejected',()=>assert.throws(()=>normalizeImport({version:99},ids)));
+test('malformed shapes are rejected',()=>assert.throws(()=>normalizeImport([],ids)));
+test('export/import roundtrip preserves allowed state',()=>{const state={version:1,lang:'ru',theme:'dark',profile:{weight:80},favorites:['bmi'],history:[],snapshots:[]};const text=exportState(state);assert.doesNotThrow(()=>JSON.parse(text));const out=importState(text,ids);assert.equal(out.profile.weight,80);assert.deepEqual(out.favorites,['bmi']);assert.equal(out.theme,'dark')});
+test('malformed JSON import is rejected without mutation',()=>assert.throws(()=>importState('{nope',ids)));

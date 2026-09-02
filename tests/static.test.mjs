@@ -1,0 +1,10 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { readFile, access } from 'node:fs/promises';
+import { dirname,resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
+test('critical files and manifest icons exist',async()=>{for(const p of ['index.html','404.html','.nojekyll','manifest.webmanifest','sw.js','assets/css/styles.css','assets/js/app.js','assets/icons/icon-192.svg','assets/icons/icon-512.svg'])await access(resolve(root,p));const m=JSON.parse(await readFile(resolve(root,'manifest.webmanifest'),'utf8'));for(const icon of m.icons)await access(resolve(root,icon.src.replace(/^\.\//,'')))});
+test('index has no remote runtime JS/CSS',async()=>{const html=await readFile(resolve(root,'index.html'),'utf8');assert.equal(/<script[^>]+src=["']https?:\/\//i.test(html),false);assert.equal(/<link[^>]+rel=["']stylesheet["'][^>]+href=["']https?:\/\//i.test(html),false);assert.match(html,/type="module"/);assert.match(html,/manifest\.webmanifest/)});
+test('service worker core files resolve',async()=>{const sw=await readFile(resolve(root,'sw.js'),'utf8');const list=[...sw.matchAll(/["'](\.\/[a-zA-Z0-9_./?=-]+)["']/g)].map(x=>x[1]).filter(x=>!x.includes('index.html#'));for(const p of new Set(list)){if(p==='./')continue;await access(resolve(root,p.split('?')[0].slice(2)))}});
+test('all JSON files parse',async()=>{for(const p of ['manifest.webmanifest','manifest-en.webmanifest','data/calculator-catalog.json','data/sources.json'])JSON.parse(await readFile(resolve(root,p),'utf8'))});

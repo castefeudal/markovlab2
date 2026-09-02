@@ -1,0 +1,17 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import * as F from '../assets/js/formulas.js';
+const near=(actual,expected,tol=1e-6)=>assert.ok(Math.abs(actual-expected)<=tol,`${actual} ≉ ${expected}`);
+test('BMI and waist ratios',()=>{near(F.bmi(80,180),24.691358);near(F.whtr(90,180),.5);near(F.whr(80,100),.8)});
+test('Mifflin–St Jeor regression vector',()=>near(F.mifflin('male',80,180,35),1755));
+test('Cunningham FFM equation',()=>near(F.cunningham(64),1752.4));
+test('Mosteller BSA',()=>near(F.mostellerBsa(80,180),2));
+test('fat and fat-free mass',()=>assert.deepEqual(F.bodyComposition(80,20),{fat:16,ffm:64}));
+test('Epley and Brzycki',()=>{near(F.epley(100,5),116.6666667);near(F.brzycki(100,5),112.5)});
+test('pace and speed round-trip',()=>{near(F.paceFromSpeed(12),5);near(F.speedFromPace(5),12)});
+test('sleep across midnight',()=>near(F.sleepDuration('23:30','07:30'),8));
+test('compound interest handles zero and positive rate',()=>{near(F.compoundInterest(1000,0,1,100,12),2200);near(F.compoundInterest(1000,12,1,0,12),1126.8250301,1e-4)});
+test('loan payment including zero percent',()=>{near(F.loanPayment(1200,0,12),100);near(F.loanPayment(10000,12,12),888.4878868,1e-4)});
+test('CAGR and real return',()=>{near(F.cagr(100,121,2),10);near(F.realReturn(10,5),4.76190476)});
+test('margin and markup differ',()=>{near(F.margin(150,100),33.3333333);near(F.markup(150,100),50)});
+test('unit conversions round trip',()=>{near(F.lbToKg(F.kgToLb(80)),80);near(F.inToCm(F.cmToIn(188)),188);near(F.miToKm(F.kmToMi(10)),10);near(F.kjToKcal(F.kcalToKj(500)),500);near(F.flozToMl(F.mlToFloz(500)),500)});

@@ -1,0 +1,2634 @@
+{
+  "schemaVersion": 2,
+  "count": 86,
+  "domains": {
+    "body": {
+      "asset": "./assets/images/domains/body.webp",
+      "limit": {
+        "ru": "Окружности и расчётные проценты чувствительны к технике измерения. Сравнивайте повторные замеры по одному протоколу; формула не заменяет DXA или клиническую оценку.",
+        "en": "Circumferences and estimated percentages are sensitive to technique. Compare repeat measurements made with one protocol; an equation does not replace DXA or clinical assessment."
+      },
+      "workflow": [
+        "weight-change",
+        "fat-gain-surplus",
+        "body-composition",
+        "navy-body-fat"
+      ],
+      "workflowNote": {
+        "ru": "Сначала зафиксируйте изменение массы, затем отделите расчётный энергетический сценарий от состава тела и только после этого сравнивайте методы оценки.",
+        "en": "Start with mass change, separate the energy scenario from body composition, then compare estimation methods."
+      }
+    },
+    "energy": {
+      "asset": "./assets/images/domains/energy.webp",
+      "limit": {
+        "ru": "Расход энергии меняется вместе с активностью, массой и адаптацией. Расчёт — стартовая гипотеза, которую следует калибровать по среднему рациону и тренду массы.",
+        "en": "Energy expenditure changes with activity, body mass and adaptation. Treat the calculation as a starting hypothesis and calibrate it against average intake and weight trend."
+      },
+      "workflow": [
+        "mifflin",
+        "tdee",
+        "calorie-target",
+        "observed-tdee"
+      ],
+      "workflowNote": {
+        "ru": "Оцените расход покоя, создайте сценарий общей энергии, выберите умеренную корректировку и затем проверьте её по наблюдаемой динамике.",
+        "en": "Estimate resting expenditure, build a total-energy scenario, choose a moderate adjustment, then verify it against observed change."
+      }
+    },
+    "nutrition": {
+      "asset": "./assets/images/domains/nutrition.webp",
+      "limit": {
+        "ru": "Диапазоны питания зависят от цели, переносимости, пищевого паттерна и клинического контекста. Они не образуют универсальный персональный план.",
+        "en": "Nutrition ranges depend on goals, tolerance, dietary pattern and clinical context. They do not form a universal personal plan."
+      },
+      "workflow": [
+        "protein-range",
+        "macro-calories",
+        "carb-remainder",
+        "calorie-density"
+      ],
+      "workflowNote": {
+        "ru": "Задайте белок, проверьте энергетическую арифметику макросов, найдите остаток углеводов и сравните реальную плотность выбранных продуктов.",
+        "en": "Set protein, check macro energy arithmetic, derive the carbohydrate remainder and compare the actual energy density of foods."
+      }
+    },
+    "strength": {
+      "asset": "./assets/images/domains/strength.webp",
+      "limit": {
+        "ru": "Оценки силы имеют смысл только внутри одного упражнения, техники, амплитуды и сопоставимого усилия. Тоннаж не равен стимулу.",
+        "en": "Strength estimates are meaningful only within the same lift, technique, range of motion and comparable effort. Tonnage is not stimulus."
+      },
+      "workflow": [
+        "e1rm",
+        "load-percent",
+        "volume-load",
+        "weekly-tonnage"
+      ],
+      "workflowNote": {
+        "ru": "Оцените 1ПМ из качественного подхода, переведите его в рабочий вес, посчитайте объём сессии и только затем недельную нагрузку.",
+        "en": "Estimate 1RM from a quality set, convert it to a working load, calculate session volume, then weekly load."
+      }
+    },
+    "cardio": {
+      "asset": "./assets/images/domains/cardio.webp",
+      "limit": {
+        "ru": "Темповые конвертации точны, а VO₂max, HRmax и зоны остаются полевыми или популяционными оценками. Протокол и условия должны быть сопоставимы.",
+        "en": "Pace conversions are exact, while VO₂max, HRmax and zones remain field or population estimates. Protocol and conditions must be comparable."
+      },
+      "workflow": [
+        "pace",
+        "race-time",
+        "riegel",
+        "aerobic-volume"
+      ],
+      "workflowNote": {
+        "ru": "Переведите скорость в темп, получите сценарий времени, оцените перенос на другую дистанцию и поместите сессию в недельный объём.",
+        "en": "Convert speed to pace, derive a time scenario, estimate transfer to another distance and place the session in weekly volume."
+      }
+    },
+    "recovery": {
+      "asset": "./assets/images/domains/recovery.webp",
+      "limit": {
+        "ru": "Время в постели, субъективная готовность и модель кофеина не измеряют физиологическое восстановление. Важнее регулярность и сопоставимые наблюдения.",
+        "en": "Time in bed, subjective readiness and caffeine models do not measure physiological recovery. Regularity and comparable observations matter more."
+      },
+      "workflow": [
+        "sleep-duration",
+        "sleep-gap",
+        "sleep-efficiency",
+        "caffeine-remaining"
+      ],
+      "workflowNote": {
+        "ru": "Сначала рассчитайте интервал сна, сравните его с выбранной целью, добавьте эффективность при наличии данных и проверьте поздний кофеин.",
+        "en": "Calculate the sleep interval, compare it with your chosen target, add efficiency when data exists and review late caffeine."
+      }
+    },
+    "mind": {
+      "asset": "./assets/images/domains/mind.webp",
+      "limit": {
+        "ru": "Проценты времени и приоритетные оценки отражают выбранные определения и субъективные суждения. Они помогают структурировать решение, но не измеряют качество жизни или продуктивность.",
+        "en": "Time percentages and priority scores reflect chosen definitions and subjective ratings. They structure a decision but do not measure quality of life or productivity."
+      },
+      "workflow": [
+        "time-budget",
+        "focus-ratio",
+        "habit-adherence",
+        "decision-matrix"
+      ],
+      "workflowNote": {
+        "ru": "Сначала увидьте доступный ресурс времени, затем его фактическое распределение, устойчивость выполнения и только после этого сравнивайте варианты.",
+        "en": "See the available time resource first, then its actual allocation, adherence and only then compare options."
+      }
+    },
+    "money": {
+      "asset": "./assets/images/domains/money.webp",
+      "limit": {
+        "ru": "Финансовые результаты — сценарии при введённых ставках, потоках и сроках. Они не включают неизвестные налоги, комиссии, риск и не являются рекомендацией.",
+        "en": "Financial outputs are scenarios under entered rates, cash flows and time horizons. They omit unknown tax, fees and risk and are not advice."
+      },
+      "workflow": [
+        "savings-rate",
+        "runway",
+        "compound-interest",
+        "real-return"
+      ],
+      "workflowNote": {
+        "ru": "Определите текущую долю сбережений и запас ликвидности, затем моделируйте рост и обязательно переводите номинальную доходность в реальную.",
+        "en": "Establish savings rate and liquidity runway, then model growth and translate nominal return into real return."
+      }
+    },
+    "utility": {
+      "asset": "./assets/images/domains/utility.webp",
+      "limit": {
+        "ru": "Преобразование единиц детерминировано; ошибка возникает из исходного числа, округления или выбора неверной единицы, а не из коэффициента.",
+        "en": "Unit conversion is deterministic; error comes from the source value, rounding or choosing the wrong unit—not from the factor."
+      },
+      "workflow": [
+        "kg-lb",
+        "cm-in",
+        "km-mi",
+        "kcal-kj"
+      ],
+      "workflowNote": {
+        "ru": "Выберите исходную единицу, сохраните разумную точность и подпишите результат перед переносом в другой расчёт.",
+        "en": "Choose the source unit, retain sensible precision and label the result before using it elsewhere."
+      }
+    }
+  },
+  "calculators": [
+    {
+      "id": "bmi",
+      "category": "body",
+      "featured": true,
+      "title": {
+        "ru": "Индекс массы тела",
+        "en": "Body mass index"
+      },
+      "description": {
+        "ru": "Скрининговое отношение веса к росту.",
+        "en": "A screening ratio of weight to height."
+      },
+      "whenUseful": {
+        "ru": "Для быстрой популяционной скрининговой оценки веса относительно роста перед добавлением окружностей и динамики.",
+        "en": "For a quick population screening view of weight relative to height before adding circumference and trend context."
+      },
+      "methodType": "screening",
+      "evidenceStrength": "high",
+      "sources": [
+        "whoBmi"
+      ],
+      "keywords": [
+        "имт",
+        "weight index"
+      ],
+      "visualization": "exact",
+      "related": [
+        "weight-change",
+        "fat-gain-surplus",
+        "body-composition",
+        "navy-body-fat"
+      ]
+    },
+    {
+      "id": "bmi-range",
+      "category": "body",
+      "featured": false,
+      "title": {
+        "ru": "Диапазон веса по BMI",
+        "en": "BMI-associated weight range"
+      },
+      "description": {
+        "ru": "Весовой диапазон для выбранных границ BMI — не «идеальный вес».",
+        "en": "Weight range for selected BMI cut-offs—not an “ideal weight”."
+      },
+      "whenUseful": {
+        "ru": "Чтобы увидеть, какой диапазон массы соответствует выбранным границам BMI при данном росте — без трактовки как «идеального веса».",
+        "en": "To see which mass range corresponds to selected BMI cut-offs at a given height—without treating it as an “ideal weight”."
+      },
+      "methodType": "screening",
+      "evidenceStrength": "high",
+      "sources": [
+        "whoBmi"
+      ],
+      "keywords": [],
+      "visualization": "range",
+      "related": [
+        "weight-change",
+        "fat-gain-surplus",
+        "body-composition",
+        "navy-body-fat"
+      ]
+    },
+    {
+      "id": "whtr",
+      "category": "body",
+      "featured": true,
+      "title": {
+        "ru": "Талия к росту",
+        "en": "Waist-to-height ratio"
+      },
+      "description": {
+        "ru": "Скрининговое отношение окружности талии к росту.",
+        "en": "A screening ratio of waist circumference to height."
+      },
+      "whenUseful": {
+        "ru": "Когда нужно добавить к весу окружностный контекст и отслеживать талию относительно роста по одному протоколу.",
+        "en": "When you need circumference context alongside weight and want to track waist relative to height with one protocol."
+      },
+      "methodType": "screening",
+      "evidenceStrength": "moderate",
+      "sources": [
+        "whoWaist",
+        "whtrReview"
+      ],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "weight-change",
+        "fat-gain-surplus",
+        "body-composition",
+        "navy-body-fat"
+      ]
+    },
+    {
+      "id": "whr",
+      "category": "body",
+      "featured": false,
+      "title": {
+        "ru": "Талия к бёдрам",
+        "en": "Waist-to-hip ratio"
+      },
+      "description": {
+        "ru": "Отношение окружности талии к окружности бёдер.",
+        "en": "Ratio of waist to hip circumference."
+      },
+      "whenUseful": {
+        "ru": "Для сравнения распределения окружностей талии и бёдер при повторных антропометрических измерениях.",
+        "en": "For comparing waist and hip circumference distribution across repeated anthropometric measurements."
+      },
+      "methodType": "screening",
+      "evidenceStrength": "moderate",
+      "sources": [
+        "whoWaist"
+      ],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "weight-change",
+        "fat-gain-surplus",
+        "body-composition",
+        "navy-body-fat"
+      ]
+    },
+    {
+      "id": "navy-body-fat",
+      "category": "body",
+      "featured": false,
+      "title": {
+        "ru": "Жир по окружностям",
+        "en": "Circumference body-fat estimate"
+      },
+      "description": {
+        "ru": "Оценка процента жира по формуле US Navy.",
+        "en": "Body-fat estimate using the U.S. Navy circumference method."
+      },
+      "whenUseful": {
+        "ru": "Для полевой оценки состава тела, когда доступны точные окружности, но нет лабораторного измерения.",
+        "en": "For a field body-composition estimate when careful circumference measurements are available but laboratory measurement is not."
+      },
+      "methodType": "validated-estimate",
+      "evidenceStrength": "moderate",
+      "sources": [
+        "navy1984"
+      ],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "weight-change",
+        "fat-gain-surplus",
+        "body-composition",
+        "bmi"
+      ]
+    },
+    {
+      "id": "rfm",
+      "category": "body",
+      "featured": false,
+      "title": {
+        "ru": "Relative Fat Mass",
+        "en": "Relative Fat Mass"
+      },
+      "description": {
+        "ru": "Оценка процента жира по росту, талии и полу.",
+        "en": "Body-fat estimate from height, waist and sex."
+      },
+      "whenUseful": {
+        "ru": "Для альтернативной антропометрической оценки процента жира по росту и талии, которую можно сопоставить с другими методами.",
+        "en": "For an alternative anthropometric body-fat estimate from height and waist that can be compared with other methods."
+      },
+      "methodType": "validated-estimate",
+      "evidenceStrength": "moderate",
+      "sources": [
+        "rfm2018"
+      ],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "weight-change",
+        "fat-gain-surplus",
+        "body-composition",
+        "navy-body-fat"
+      ]
+    },
+    {
+      "id": "deurenberg",
+      "category": "body",
+      "featured": false,
+      "title": {
+        "ru": "Процент жира по Deurenberg",
+        "en": "Deurenberg body-fat estimate"
+      },
+      "description": {
+        "ru": "Оценка по BMI, возрасту и полу.",
+        "en": "Estimate from BMI, age and sex."
+      },
+      "whenUseful": {
+        "ru": "Когда нужна популяционная оценка процента жира из уже известных BMI, возраста и пола.",
+        "en": "When a population body-fat estimate is needed from known BMI, age and sex."
+      },
+      "methodType": "validated-estimate",
+      "evidenceStrength": "moderate",
+      "sources": [
+        "deurenberg1991"
+      ],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "weight-change",
+        "fat-gain-surplus",
+        "body-composition",
+        "navy-body-fat"
+      ]
+    },
+    {
+      "id": "body-composition",
+      "category": "body",
+      "featured": true,
+      "title": {
+        "ru": "Жировая и безжировая масса",
+        "en": "Fat and fat-free mass"
+      },
+      "description": {
+        "ru": "Разложение веса по введённому проценту жира.",
+        "en": "Splits body weight using an entered body-fat percentage."
+      },
+      "whenUseful": {
+        "ru": "Чтобы перевести введённый процент жира в килограммы жировой и безжировой массы.",
+        "en": "To translate an entered body-fat percentage into kilograms of fat and fat-free mass."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "composition",
+      "related": [
+        "weight-change",
+        "fat-gain-surplus",
+        "navy-body-fat",
+        "bmi"
+      ]
+    },
+    {
+      "id": "ffmi",
+      "category": "body",
+      "featured": false,
+      "title": {
+        "ru": "FFMI",
+        "en": "Fat-free mass index"
+      },
+      "description": {
+        "ru": "Безжировая масса относительно роста.",
+        "en": "Fat-free mass relative to height."
+      },
+      "whenUseful": {
+        "ru": "Для сравнения безжировой массы относительно роста при неизменном методе оценки состава тела.",
+        "en": "For comparing fat-free mass relative to height while keeping the body-composition method constant."
+      },
+      "methodType": "math",
+      "evidenceStrength": "moderate",
+      "sources": [],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "weight-change",
+        "fat-gain-surplus",
+        "body-composition",
+        "navy-body-fat"
+      ]
+    },
+    {
+      "id": "normalized-ffmi",
+      "category": "body",
+      "featured": false,
+      "title": {
+        "ru": "Нормализованный FFMI",
+        "en": "Height-normalized FFMI"
+      },
+      "description": {
+        "ru": "FFMI с поправкой к росту 1,80 м.",
+        "en": "FFMI adjusted to a reference height of 1.80 m."
+      },
+      "whenUseful": {
+        "ru": "Для ориентировочного сравнения FFMI людей разного роста с явно указанной эвристической поправкой.",
+        "en": "For approximate FFMI comparison across heights using an explicitly heuristic adjustment."
+      },
+      "methodType": "heuristic",
+      "evidenceStrength": "limited",
+      "sources": [],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "weight-change",
+        "fat-gain-surplus",
+        "body-composition",
+        "navy-body-fat"
+      ]
+    },
+    {
+      "id": "bsa",
+      "category": "body",
+      "featured": false,
+      "title": {
+        "ru": "Площадь поверхности тела",
+        "en": "Body surface area"
+      },
+      "description": {
+        "ru": "Формула Мостеллера по росту и весу.",
+        "en": "Mosteller equation from height and weight."
+      },
+      "whenUseful": {
+        "ru": "Для неклинического контекста площади поверхности тела; не для самостоятельного расчёта дозировок.",
+        "en": "For non-clinical body-surface-area context; not for unsupervised dosing."
+      },
+      "methodType": "validated-estimate",
+      "evidenceStrength": "moderate",
+      "sources": [
+        "mosteller1987"
+      ],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "weight-change",
+        "fat-gain-surplus",
+        "body-composition",
+        "navy-body-fat"
+      ]
+    },
+    {
+      "id": "weight-change",
+      "category": "body",
+      "featured": false,
+      "title": {
+        "ru": "Изменение веса",
+        "en": "Weight change"
+      },
+      "description": {
+        "ru": "Абсолютное и процентное изменение между двумя точками.",
+        "en": "Absolute and percentage change between two points."
+      },
+      "whenUseful": {
+        "ru": "Чтобы точно отделить абсолютное изменение массы от относительного между двумя точками.",
+        "en": "To separate absolute from relative body-mass change between two observations."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "delta",
+      "related": [
+        "fat-gain-surplus",
+        "body-composition",
+        "navy-body-fat",
+        "bmi"
+      ]
+    },
+    {
+      "id": "weekly-weight-trend",
+      "category": "body",
+      "featured": false,
+      "title": {
+        "ru": "Недельный тренд веса",
+        "en": "Weekly weight trend"
+      },
+      "description": {
+        "ru": "Среднее изменение веса в неделю между двумя датами.",
+        "en": "Average weekly weight change between two observations."
+      },
+      "whenUseful": {
+        "ru": "Для приведения изменения массы за произвольный период к среднему недельному темпу.",
+        "en": "To normalize body-mass change over any interval into an average weekly rate."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "delta",
+      "related": [
+        "weight-change",
+        "fat-gain-surplus",
+        "body-composition",
+        "navy-body-fat"
+      ]
+    },
+    {
+      "id": "target-waist",
+      "category": "body",
+      "featured": false,
+      "title": {
+        "ru": "Сценарий целевой талии",
+        "en": "Target-waist scenario"
+      },
+      "description": {
+        "ru": "Окружность талии при выбранном WHtR.",
+        "en": "Waist circumference at a selected WHtR."
+      },
+      "whenUseful": {
+        "ru": "Для сценарного перевода выбранного WHtR в окружность талии при данном росте.",
+        "en": "To convert a chosen WHtR scenario into waist circumference at a given height."
+      },
+      "methodType": "screening",
+      "evidenceStrength": "moderate",
+      "sources": [
+        "whtrReview"
+      ],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "weight-change",
+        "fat-gain-surplus",
+        "body-composition",
+        "navy-body-fat"
+      ]
+    },
+    {
+      "id": "fat-gain-surplus",
+      "category": "body",
+      "featured": true,
+      "title": {
+        "ru": "Жировой эквивалент избытка энергии",
+        "en": "Estimated fat-equivalent of an energy surplus"
+      },
+      "description": {
+        "ru": "Модельный ориентир: перевод расчётного избытка энергии в жировой эквивалент.",
+        "en": "A model estimate translating theoretical energy surplus into fat-equivalent mass."
+      },
+      "whenUseful": {
+        "ru": "Чтобы разобрать теоретический избыток энергии по макросам и увидеть его жировой эквивалент в килограммах — без выдачи результата за измерение состава тела.",
+        "en": "To break down a theoretical energy surplus by macronutrients and see its fat-equivalent in kilograms—without treating it as a body-composition measurement."
+      },
+      "methodType": "heuristic",
+      "evidenceStrength": "limited",
+      "sources": [
+        "fatGainWorkbook"
+      ],
+      "keywords": [
+        "набор жира",
+        "избыток калорий",
+        "fat gain",
+        "energy surplus",
+        "overeating"
+      ],
+      "visualization": "scenario",
+      "related": [
+        "weight-change",
+        "body-composition",
+        "navy-body-fat",
+        "bmi"
+      ]
+    },
+    {
+      "id": "mifflin",
+      "category": "energy",
+      "featured": true,
+      "title": {
+        "ru": "Основной обмен Mifflin–St Jeor",
+        "en": "Mifflin–St Jeor resting energy"
+      },
+      "description": {
+        "ru": "Оценка расхода энергии покоя по антропометрии.",
+        "en": "Resting energy estimate from anthropometry."
+      },
+      "whenUseful": {
+        "ru": "Как стартовая оценка расхода покоя перед расчётом общей энергии и последующей калибровкой.",
+        "en": "As a starting resting-expenditure estimate before total-energy modeling and later calibration."
+      },
+      "methodType": "validated-estimate",
+      "evidenceStrength": "moderate",
+      "sources": [
+        "mifflin1990"
+      ],
+      "keywords": [
+        "bmr",
+        "rmr"
+      ],
+      "visualization": "exact",
+      "related": [
+        "tdee",
+        "calorie-target",
+        "observed-tdee",
+        "cunningham"
+      ]
+    },
+    {
+      "id": "cunningham",
+      "category": "energy",
+      "featured": false,
+      "title": {
+        "ru": "Расход покоя по Cunningham",
+        "en": "Cunningham resting energy"
+      },
+      "description": {
+        "ru": "Оценка по безжировой массе.",
+        "en": "Resting energy estimate from fat-free mass."
+      },
+      "whenUseful": {
+        "ru": "Когда безжировая масса измерена достаточно надёжно и нужна альтернативная оценка расхода покоя.",
+        "en": "When fat-free mass is measured with reasonable quality and an alternative resting-expenditure estimate is useful."
+      },
+      "methodType": "validated-estimate",
+      "evidenceStrength": "moderate",
+      "sources": [
+        "cunningham1991"
+      ],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "mifflin",
+        "tdee",
+        "calorie-target",
+        "observed-tdee"
+      ]
+    },
+    {
+      "id": "tdee",
+      "category": "energy",
+      "featured": true,
+      "title": {
+        "ru": "Сценарий TDEE",
+        "en": "TDEE activity scenario"
+      },
+      "description": {
+        "ru": "Расход покоя, умноженный на коэффициент активности.",
+        "en": "Resting energy multiplied by an activity factor."
+      },
+      "whenUseful": {
+        "ru": "Для быстрого сценария поддерживающей энергии из расхода покоя и выбранного коэффициента активности.",
+        "en": "For a quick maintenance-energy scenario from resting expenditure and a chosen activity factor."
+      },
+      "methodType": "heuristic",
+      "evidenceStrength": "limited",
+      "sources": [
+        "mifflin1990"
+      ],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "mifflin",
+        "calorie-target",
+        "observed-tdee",
+        "cunningham"
+      ]
+    },
+    {
+      "id": "observed-tdee",
+      "category": "energy",
+      "featured": false,
+      "title": {
+        "ru": "TDEE по наблюдаемому тренду",
+        "en": "Observed-trend TDEE"
+      },
+      "description": {
+        "ru": "Калибровка расхода по среднему рациону и изменению веса.",
+        "en": "Calibrates expenditure from average intake and weight trend."
+      },
+      "whenUseful": {
+        "ru": "Когда есть несколько недель среднего рациона и изменения массы для практической калибровки расхода.",
+        "en": "When several weeks of average intake and body-mass change are available for practical expenditure calibration."
+      },
+      "methodType": "heuristic",
+      "evidenceStrength": "limited",
+      "sources": [],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "mifflin",
+        "tdee",
+        "calorie-target",
+        "cunningham"
+      ]
+    },
+    {
+      "id": "calorie-target",
+      "category": "energy",
+      "featured": false,
+      "title": {
+        "ru": "Сценарий калорий",
+        "en": "Calorie target scenario"
+      },
+      "description": {
+        "ru": "Процентное изменение от выбранной поддержки.",
+        "en": "Percentage adjustment from chosen maintenance."
+      },
+      "whenUseful": {
+        "ru": "Чтобы сравнить умеренные процентные изменения от выбранной поддержки перед проверкой по динамике.",
+        "en": "To compare moderate percentage adjustments from chosen maintenance before checking observed trend."
+      },
+      "methodType": "heuristic",
+      "evidenceStrength": "limited",
+      "sources": [],
+      "keywords": [],
+      "visualization": "scenario",
+      "related": [
+        "mifflin",
+        "tdee",
+        "observed-tdee",
+        "cunningham"
+      ]
+    },
+    {
+      "id": "energy-equivalent",
+      "category": "energy",
+      "featured": false,
+      "title": {
+        "ru": "Энергетический эквивалент",
+        "en": "Energy-equivalent arithmetic"
+      },
+      "description": {
+        "ru": "Перевод дефицита/профицита в грубый эквивалент массы.",
+        "en": "Converts an energy gap into a rough mass equivalent."
+      },
+      "whenUseful": {
+        "ru": "Для перевода суммарного энергетического разрыва в грубый эквивалент массы, не прогноз.",
+        "en": "To translate a cumulative energy gap into a rough mass equivalent, not a forecast."
+      },
+      "methodType": "heuristic",
+      "evidenceStrength": "limited",
+      "sources": [],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "mifflin",
+        "tdee",
+        "calorie-target",
+        "observed-tdee"
+      ]
+    },
+    {
+      "id": "protein-range",
+      "category": "nutrition",
+      "featured": true,
+      "title": {
+        "ru": "Диапазон белка",
+        "en": "Protein target range"
+      },
+      "description": {
+        "ru": "Практический диапазон в граммах по весу.",
+        "en": "Practical grams-per-day range from body weight."
+      },
+      "whenUseful": {
+        "ru": "Для выбора практичного диапазона белка по массе тела и задаче рациона.",
+        "en": "For choosing a practical protein range from body mass and dietary goal."
+      },
+      "methodType": "guideline",
+      "evidenceStrength": "moderate",
+      "sources": [
+        "protein2017",
+        "efsaProtein"
+      ],
+      "keywords": [],
+      "visualization": "range",
+      "related": [
+        "macro-calories",
+        "carb-remainder",
+        "calorie-density",
+        "protein-per-meal"
+      ]
+    },
+    {
+      "id": "protein-per-meal",
+      "category": "nutrition",
+      "featured": false,
+      "title": {
+        "ru": "Белок на приём пищи",
+        "en": "Protein per meal"
+      },
+      "description": {
+        "ru": "Равномерное распределение дневной цели.",
+        "en": "Even distribution of a daily protein target."
+      },
+      "whenUseful": {
+        "ru": "Чтобы распределить уже выбранную суточную цель по удобному числу приёмов пищи.",
+        "en": "To distribute an already chosen daily target across a convenient number of meals."
+      },
+      "methodType": "heuristic",
+      "evidenceStrength": "limited",
+      "sources": [
+        "protein2017"
+      ],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "protein-range",
+        "macro-calories",
+        "carb-remainder",
+        "calorie-density"
+      ]
+    },
+    {
+      "id": "macro-calories",
+      "category": "nutrition",
+      "featured": false,
+      "title": {
+        "ru": "Калории из макронутриентов",
+        "en": "Calories from macros"
+      },
+      "description": {
+        "ru": "Расчёт по коэффициентам Атватера.",
+        "en": "Calculation using standard Atwater factors."
+      },
+      "whenUseful": {
+        "ru": "Для проверки, согласуются ли граммы макронутриентов с общей заявленной калорийностью.",
+        "en": "To check whether macronutrient grams are consistent with stated total calories."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "composition",
+      "related": [
+        "protein-range",
+        "carb-remainder",
+        "calorie-density",
+        "protein-per-meal"
+      ]
+    },
+    {
+      "id": "carb-remainder",
+      "category": "nutrition",
+      "featured": false,
+      "title": {
+        "ru": "Углеводы по остатку",
+        "en": "Carbohydrate remainder"
+      },
+      "description": {
+        "ru": "Углеводы после заданных калорий, белка и жира.",
+        "en": "Carbohydrates remaining after calories, protein and fat."
+      },
+      "whenUseful": {
+        "ru": "Когда белок и жир заданы первыми, а углеводы должны занять оставшийся энергетический бюджет.",
+        "en": "When protein and fat are set first and carbohydrates should fill the remaining energy budget."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "protein-range",
+        "macro-calories",
+        "calorie-density",
+        "protein-per-meal"
+      ]
+    },
+    {
+      "id": "fat-range",
+      "category": "nutrition",
+      "featured": false,
+      "title": {
+        "ru": "Диапазон жиров",
+        "en": "Dietary fat range"
+      },
+      "description": {
+        "ru": "Перевод процента калорий в граммы жира.",
+        "en": "Converts a calorie percentage to grams of fat."
+      },
+      "whenUseful": {
+        "ru": "Для перевода выбранной доли энергии из жира в понятный диапазон граммов.",
+        "en": "To convert a chosen share of energy from fat into an actionable gram range."
+      },
+      "methodType": "guideline",
+      "evidenceStrength": "moderate",
+      "sources": [],
+      "keywords": [],
+      "visualization": "range",
+      "related": [
+        "protein-range",
+        "macro-calories",
+        "carb-remainder",
+        "calorie-density"
+      ]
+    },
+    {
+      "id": "fiber-reference",
+      "category": "nutrition",
+      "featured": false,
+      "title": {
+        "ru": "Ориентир клетчатки",
+        "en": "Fiber reference"
+      },
+      "description": {
+        "ru": "Масштабируемый ориентир граммов на 1000 ккал.",
+        "en": "Scalable grams-per-1000-kcal reference."
+      },
+      "whenUseful": {
+        "ru": "Чтобы масштабировать выбранный ориентир клетчатки под фактическую калорийность рациона.",
+        "en": "To scale a chosen fiber reference to actual energy intake."
+      },
+      "methodType": "guideline",
+      "evidenceStrength": "moderate",
+      "sources": [],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "protein-range",
+        "macro-calories",
+        "carb-remainder",
+        "calorie-density"
+      ]
+    },
+    {
+      "id": "hydration",
+      "category": "nutrition",
+      "featured": false,
+      "title": {
+        "ru": "Гидратация: базовая эвристика",
+        "en": "Hydration baseline heuristic"
+      },
+      "description": {
+        "ru": "Стартовый объём жидкости по массе тела.",
+        "en": "Starting fluid volume from body weight."
+      },
+      "whenUseful": {
+        "ru": "Как грубая отправная точка объёма жидкости перед поправкой на жару, пот, пищу и здоровье.",
+        "en": "As a rough fluid starting point before adjusting for heat, sweat, food and health context."
+      },
+      "methodType": "heuristic",
+      "evidenceStrength": "limited",
+      "sources": [],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "protein-range",
+        "macro-calories",
+        "carb-remainder",
+        "calorie-density"
+      ]
+    },
+    {
+      "id": "caffeine-dose",
+      "category": "nutrition",
+      "featured": true,
+      "title": {
+        "ru": "Кофеин на кг",
+        "en": "Caffeine per kg"
+      },
+      "description": {
+        "ru": "Суточная или разовая доза относительно веса.",
+        "en": "Daily or single dose relative to body weight."
+      },
+      "whenUseful": {
+        "ru": "Для одновременной проверки абсолютной дозы кофеина и её отношения к массе тела.",
+        "en": "To review both absolute caffeine dose and dose relative to body mass."
+      },
+      "methodType": "guideline",
+      "evidenceStrength": "high",
+      "sources": [
+        "efsaCaffeine"
+      ],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "protein-range",
+        "macro-calories",
+        "carb-remainder",
+        "calorie-density"
+      ]
+    },
+    {
+      "id": "tef",
+      "category": "nutrition",
+      "featured": false,
+      "title": {
+        "ru": "Термический эффект пищи",
+        "en": "Thermic effect range"
+      },
+      "description": {
+        "ru": "Грубый диапазон доли калорий на переваривание.",
+        "en": "Rough range of energy spent processing food."
+      },
+      "whenUseful": {
+        "ru": "Чтобы понять возможный порядок величины термического эффекта, не вычитая его повторно из TDEE.",
+        "en": "To understand the rough magnitude of thermic effect without double-counting it against TDEE."
+      },
+      "methodType": "heuristic",
+      "evidenceStrength": "limited",
+      "sources": [],
+      "keywords": [],
+      "visualization": "range",
+      "related": [
+        "protein-range",
+        "macro-calories",
+        "carb-remainder",
+        "calorie-density"
+      ]
+    },
+    {
+      "id": "calorie-density",
+      "category": "nutrition",
+      "featured": false,
+      "title": {
+        "ru": "Калорийная плотность",
+        "en": "Calorie density"
+      },
+      "description": {
+        "ru": "Калории на 100 г продукта.",
+        "en": "Calories per 100 g of food."
+      },
+      "whenUseful": {
+        "ru": "Для сравнения похожих продуктов или порций по энергии на 100 граммов.",
+        "en": "For comparing similar foods or portions by energy per 100 grams."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "protein-range",
+        "macro-calories",
+        "carb-remainder",
+        "protein-per-meal"
+      ]
+    },
+    {
+      "id": "protein-price",
+      "category": "nutrition",
+      "featured": false,
+      "title": {
+        "ru": "Цена 100 г белка",
+        "en": "Price per 100 g protein"
+      },
+      "description": {
+        "ru": "Сравнение продуктов по стоимости белка.",
+        "en": "Compares foods by protein cost."
+      },
+      "whenUseful": {
+        "ru": "Когда нужно сравнить стоимость белка в упаковках разного размера и состава.",
+        "en": "When comparing protein cost across packages of different size and composition."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "protein-range",
+        "macro-calories",
+        "carb-remainder",
+        "calorie-density"
+      ]
+    },
+    {
+      "id": "e1rm",
+      "category": "strength",
+      "featured": true,
+      "title": {
+        "ru": "Оценка 1ПМ",
+        "en": "Estimated 1RM"
+      },
+      "description": {
+        "ru": "Сравнение формул Epley и Brzycki.",
+        "en": "Compares Epley and Brzycki estimates."
+      },
+      "whenUseful": {
+        "ru": "Для планирования рабочих весов по качественному многоповторному подходу без теста фактического 1ПМ.",
+        "en": "For planning training loads from a quality multi-rep set without testing a true 1RM."
+      },
+      "methodType": "validated-estimate",
+      "evidenceStrength": "moderate",
+      "sources": [],
+      "keywords": [
+        "1rm",
+        "one rep max"
+      ],
+      "visualization": "comparison",
+      "related": [
+        "load-percent",
+        "volume-load",
+        "weekly-tonnage",
+        "relative-strength"
+      ]
+    },
+    {
+      "id": "load-percent",
+      "category": "strength",
+      "featured": false,
+      "title": {
+        "ru": "Вес по проценту 1ПМ",
+        "en": "Load from 1RM percentage"
+      },
+      "description": {
+        "ru": "Рабочий вес по введённому 1ПМ и проценту.",
+        "en": "Training load from entered 1RM and percentage."
+      },
+      "whenUseful": {
+        "ru": "Чтобы перевести известный или оценочный 1ПМ в рабочий вес для выбранного процента.",
+        "en": "To convert a known or estimated 1RM into a working load at a chosen percentage."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "e1rm",
+        "volume-load",
+        "weekly-tonnage",
+        "relative-strength"
+      ]
+    },
+    {
+      "id": "relative-strength",
+      "category": "strength",
+      "featured": false,
+      "title": {
+        "ru": "Относительная сила",
+        "en": "Relative strength"
+      },
+      "description": {
+        "ru": "Поднятый вес относительно массы тела.",
+        "en": "Lifted load relative to body weight."
+      },
+      "whenUseful": {
+        "ru": "Для сравнения результата в одном и том же упражнении с учётом массы тела.",
+        "en": "For comparing performance in the same lift while accounting for body mass."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "e1rm",
+        "load-percent",
+        "volume-load",
+        "weekly-tonnage"
+      ]
+    },
+    {
+      "id": "volume-load",
+      "category": "strength",
+      "featured": false,
+      "title": {
+        "ru": "Объём нагрузки",
+        "en": "Volume load"
+      },
+      "description": {
+        "ru": "Вес × повторы × подходы.",
+        "en": "Load × reps × sets."
+      },
+      "whenUseful": {
+        "ru": "Чтобы зафиксировать механический объём одного упражнения в конкретной сессии.",
+        "en": "To quantify mechanical volume for one exercise in a specific session."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "e1rm",
+        "load-percent",
+        "weekly-tonnage",
+        "relative-strength"
+      ]
+    },
+    {
+      "id": "weekly-tonnage",
+      "category": "strength",
+      "featured": false,
+      "title": {
+        "ru": "Недельный тоннаж",
+        "en": "Weekly tonnage"
+      },
+      "description": {
+        "ru": "Объём упражнения за неделю.",
+        "en": "Weekly volume load for an exercise."
+      },
+      "whenUseful": {
+        "ru": "Для суммирования сопоставимого объёма одного упражнения за неделю.",
+        "en": "For summing comparable volume of one exercise across a week."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "e1rm",
+        "load-percent",
+        "volume-load",
+        "relative-strength"
+      ]
+    },
+    {
+      "id": "plate-loader",
+      "category": "strength",
+      "featured": false,
+      "title": {
+        "ru": "Калькулятор блинов",
+        "en": "Plate loader"
+      },
+      "description": {
+        "ru": "Подбирает диски и честно показывает достижимый вес.",
+        "en": "Selects plates and honestly reports the achievable load."
+      },
+      "whenUseful": {
+        "ru": "Чтобы быстро собрать целевой вес из стандартных пар дисков и проверить остаток.",
+        "en": "To assemble a target load from standard plate pairs and check any remainder."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "e1rm",
+        "load-percent",
+        "volume-load",
+        "weekly-tonnage"
+      ]
+    },
+    {
+      "id": "strength-density",
+      "category": "strength",
+      "featured": false,
+      "title": {
+        "ru": "Плотность тренировки",
+        "en": "Strength density"
+      },
+      "description": {
+        "ru": "Тоннаж за минуту сессии.",
+        "en": "Volume load per session minute."
+      },
+      "whenUseful": {
+        "ru": "Для сравнения плотности похожих сессий при одинаковом определении объёма и времени.",
+        "en": "For comparing density of similar sessions using the same definitions of volume and time."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "e1rm",
+        "load-percent",
+        "volume-load",
+        "weekly-tonnage"
+      ]
+    },
+    {
+      "id": "rir-adjustment",
+      "category": "strength",
+      "featured": false,
+      "title": {
+        "ru": "RIR: потенциальные повторы",
+        "en": "RIR: potential reps"
+      },
+      "description": {
+        "ru": "Прозрачная эвристика: выполненные повторы + запас.",
+        "en": "Transparent heuristic: completed reps plus reps in reserve."
+      },
+      "whenUseful": {
+        "ru": "Для грубой проверки связи выполненных повторов с субъективным запасом RIR.",
+        "en": "For a rough check of completed repetitions against subjective reps in reserve."
+      },
+      "methodType": "heuristic",
+      "evidenceStrength": "limited",
+      "sources": [],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "e1rm",
+        "load-percent",
+        "volume-load",
+        "weekly-tonnage"
+      ]
+    },
+    {
+      "id": "pace",
+      "category": "cardio",
+      "featured": true,
+      "title": {
+        "ru": "Темп из скорости",
+        "en": "Pace from speed"
+      },
+      "description": {
+        "ru": "Перевод км/ч в мин/км.",
+        "en": "Converts km/h to min/km."
+      },
+      "whenUseful": {
+        "ru": "Когда скорость известна, а план или дистанция записаны в минутах на километр.",
+        "en": "When speed is known but a plan or route is expressed in minutes per kilometer."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "conversion",
+      "related": [
+        "race-time",
+        "riegel",
+        "aerobic-volume",
+        "speed"
+      ]
+    },
+    {
+      "id": "speed",
+      "category": "cardio",
+      "featured": false,
+      "title": {
+        "ru": "Скорость из темпа",
+        "en": "Speed from pace"
+      },
+      "description": {
+        "ru": "Перевод мин/км в км/ч.",
+        "en": "Converts min/km to km/h."
+      },
+      "whenUseful": {
+        "ru": "Когда темп известен, а тренажёр или отчёт требует среднюю скорость.",
+        "en": "When pace is known but a machine or report requires average speed."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "conversion",
+      "related": [
+        "pace",
+        "race-time",
+        "riegel",
+        "aerobic-volume"
+      ]
+    },
+    {
+      "id": "race-time",
+      "category": "cardio",
+      "featured": false,
+      "title": {
+        "ru": "Время дистанции",
+        "en": "Race time from pace"
+      },
+      "description": {
+        "ru": "Время по дистанции и среднему темпу.",
+        "en": "Time from distance and average pace."
+      },
+      "whenUseful": {
+        "ru": "Для сценария времени на дистанции при постоянном среднем темпе.",
+        "en": "For a distance-time scenario at a constant average pace."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "conversion",
+      "related": [
+        "pace",
+        "riegel",
+        "aerobic-volume",
+        "speed"
+      ]
+    },
+    {
+      "id": "riegel",
+      "category": "cardio",
+      "featured": false,
+      "title": {
+        "ru": "Прогноз Riegel",
+        "en": "Riegel race prediction"
+      },
+      "description": {
+        "ru": "Экстраполяция времени между дистанциями.",
+        "en": "Extrapolates time between race distances."
+      },
+      "whenUseful": {
+        "ru": "Для осторожной экстраполяции результата на другую дистанцию при сходной готовности.",
+        "en": "For cautious extrapolation of a result to another distance under similar readiness."
+      },
+      "methodType": "validated-estimate",
+      "evidenceStrength": "moderate",
+      "sources": [],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "pace",
+        "race-time",
+        "aerobic-volume",
+        "speed"
+      ]
+    },
+    {
+      "id": "cooper",
+      "category": "cardio",
+      "featured": false,
+      "title": {
+        "ru": "Тест Купера: VO₂max",
+        "en": "Cooper test VO₂max"
+      },
+      "description": {
+        "ru": "Полевая оценка по дистанции за 12 минут.",
+        "en": "Field estimate from 12-minute distance."
+      },
+      "whenUseful": {
+        "ru": "Для полевой оценки VO₂max по стандартизированному безопасному 12-минутному тесту.",
+        "en": "For a field VO₂max estimate from a standardized, safely performed 12-minute test."
+      },
+      "methodType": "validated-estimate",
+      "evidenceStrength": "moderate",
+      "sources": [
+        "cooperValidation"
+      ],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "pace",
+        "race-time",
+        "riegel",
+        "aerobic-volume"
+      ]
+    },
+    {
+      "id": "rockport",
+      "category": "cardio",
+      "featured": false,
+      "title": {
+        "ru": "Rockport: VO₂max",
+        "en": "Rockport VO₂max"
+      },
+      "description": {
+        "ru": "Оценка по ходьбе на 1 милю.",
+        "en": "Estimate from a one-mile walk."
+      },
+      "whenUseful": {
+        "ru": "Для полевой оценки VO₂max после стандартизированной ходьбы на одну милю.",
+        "en": "For a field VO₂max estimate after a standardized one-mile walk."
+      },
+      "methodType": "validated-estimate",
+      "evidenceStrength": "moderate",
+      "sources": [
+        "rockport1987"
+      ],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "pace",
+        "race-time",
+        "riegel",
+        "aerobic-volume"
+      ]
+    },
+    {
+      "id": "hrmax",
+      "category": "cardio",
+      "featured": true,
+      "title": {
+        "ru": "Максимальная ЧСС по возрасту",
+        "en": "Age-predicted HRmax"
+      },
+      "description": {
+        "ru": "Популяционная оценка 208 − 0,7×возраст.",
+        "en": "Population estimate: 208 − 0.7×age."
+      },
+      "whenUseful": {
+        "ru": "Когда измеренный максимум недоступен и нужен грубый возрастной ориентир для контекста.",
+        "en": "When measured maximum is unavailable and a coarse age-based reference is needed for context."
+      },
+      "methodType": "validated-estimate",
+      "evidenceStrength": "moderate",
+      "sources": [
+        "tanaka2001"
+      ],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "pace",
+        "race-time",
+        "riegel",
+        "aerobic-volume"
+      ]
+    },
+    {
+      "id": "hrr-zones",
+      "category": "cardio",
+      "featured": false,
+      "title": {
+        "ru": "Зоны по резерву ЧСС",
+        "en": "Heart-rate reserve zone"
+      },
+      "description": {
+        "ru": "Диапазон по формуле Karvonen.",
+        "en": "Range using heart-rate reserve."
+      },
+      "whenUseful": {
+        "ru": "Чтобы построить диапазон интенсивности из максимальной ЧСС и пульса покоя с явными допущениями.",
+        "en": "To build an intensity range from maximum and resting heart rate with explicit assumptions."
+      },
+      "methodType": "heuristic",
+      "evidenceStrength": "moderate",
+      "sources": [
+        "tanaka2001"
+      ],
+      "keywords": [],
+      "visualization": "range",
+      "related": [
+        "pace",
+        "race-time",
+        "riegel",
+        "aerobic-volume"
+      ]
+    },
+    {
+      "id": "met-calories",
+      "category": "cardio",
+      "featured": false,
+      "title": {
+        "ru": "Калории по MET",
+        "en": "MET calorie estimate"
+      },
+      "description": {
+        "ru": "Популяционная оценка затрат по MET.",
+        "en": "Population estimate of energy cost from METs."
+      },
+      "whenUseful": {
+        "ru": "Для грубой популяционной оценки энергии активности по MET, массе и длительности.",
+        "en": "For a rough population estimate of activity energy from MET, mass and duration."
+      },
+      "methodType": "validated-estimate",
+      "evidenceStrength": "limited",
+      "sources": [],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "pace",
+        "race-time",
+        "riegel",
+        "aerobic-volume"
+      ]
+    },
+    {
+      "id": "steps-distance",
+      "category": "cardio",
+      "featured": false,
+      "title": {
+        "ru": "Шаги в расстояние",
+        "en": "Steps to distance"
+      },
+      "description": {
+        "ru": "Расстояние по числу шагов и длине шага.",
+        "en": "Distance from step count and stride length."
+      },
+      "whenUseful": {
+        "ru": "Чтобы перевести шаги в расстояние при известной средней длине шага.",
+        "en": "To convert steps into distance when average stride length is known."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "conversion",
+      "related": [
+        "pace",
+        "race-time",
+        "riegel",
+        "aerobic-volume"
+      ]
+    },
+    {
+      "id": "cadence-speed",
+      "category": "cardio",
+      "featured": false,
+      "title": {
+        "ru": "Скорость по каденсу",
+        "en": "Speed from cadence"
+      },
+      "description": {
+        "ru": "Скорость по шагам в минуту и длине шага.",
+        "en": "Speed from steps per minute and stride length."
+      },
+      "whenUseful": {
+        "ru": "Для связи каденса и длины шага со средней скоростью движения.",
+        "en": "To relate cadence and stride length to average movement speed."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "conversion",
+      "related": [
+        "pace",
+        "race-time",
+        "riegel",
+        "aerobic-volume"
+      ]
+    },
+    {
+      "id": "watts-per-kg",
+      "category": "cardio",
+      "featured": false,
+      "title": {
+        "ru": "Мощность на кг",
+        "en": "Watts per kg"
+      },
+      "description": {
+        "ru": "Относительная механическая мощность.",
+        "en": "Relative mechanical power."
+      },
+      "whenUseful": {
+        "ru": "Для нормализации мощности по массе тела при одинаковом протоколе и длительности.",
+        "en": "To normalize power by body mass under the same protocol and duration."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "pace",
+        "race-time",
+        "riegel",
+        "aerobic-volume"
+      ]
+    },
+    {
+      "id": "ftp-zones",
+      "category": "cardio",
+      "featured": false,
+      "title": {
+        "ru": "Зоны мощности FTP",
+        "en": "FTP power zones"
+      },
+      "description": {
+        "ru": "Простая зона по выбранным процентам FTP.",
+        "en": "A power range from selected FTP percentages."
+      },
+      "whenUseful": {
+        "ru": "Чтобы получить рабочий диапазон мощности по собственной схеме процентов FTP.",
+        "en": "To derive a training power range from your chosen FTP percentage scheme."
+      },
+      "methodType": "heuristic",
+      "evidenceStrength": "limited",
+      "sources": [],
+      "keywords": [],
+      "visualization": "range",
+      "related": [
+        "pace",
+        "race-time",
+        "riegel",
+        "aerobic-volume"
+      ]
+    },
+    {
+      "id": "aerobic-volume",
+      "category": "cardio",
+      "featured": true,
+      "title": {
+        "ru": "Аэробный эквивалент недели",
+        "en": "Weekly aerobic equivalent"
+      },
+      "description": {
+        "ru": "Умеренные минуты + двойной вес интенсивных.",
+        "en": "Moderate minutes plus double-weighted vigorous minutes."
+      },
+      "whenUseful": {
+        "ru": "Для сопоставления недельного объёма с ориентиром ВОЗ через умеренный эквивалент.",
+        "en": "To compare weekly volume with WHO guidance through moderate-equivalent minutes."
+      },
+      "methodType": "guideline",
+      "evidenceStrength": "high",
+      "sources": [
+        "whoActivity"
+      ],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "pace",
+        "race-time",
+        "riegel",
+        "speed"
+      ]
+    },
+    {
+      "id": "sleep-duration",
+      "category": "recovery",
+      "featured": true,
+      "title": {
+        "ru": "Длительность сна",
+        "en": "Sleep duration"
+      },
+      "description": {
+        "ru": "Сон между временем отбоя и подъёма, включая переход через полночь.",
+        "en": "Sleep between bedtime and wake time, including midnight crossing."
+      },
+      "whenUseful": {
+        "ru": "Чтобы корректно посчитать интервал между отбоем и подъёмом, включая переход через полночь.",
+        "en": "To calculate the interval between bedtime and wake time, including midnight crossing."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [
+        "aasmSleep"
+      ],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "sleep-gap",
+        "sleep-efficiency",
+        "caffeine-remaining",
+        "sleep-midpoint"
+      ]
+    },
+    {
+      "id": "sleep-gap",
+      "category": "recovery",
+      "featured": false,
+      "title": {
+        "ru": "Дефицит сна к цели",
+        "en": "Sleep gap to target"
+      },
+      "description": {
+        "ru": "Разница между фактическим сном и выбранной целью.",
+        "en": "Difference between actual sleep and a selected target."
+      },
+      "whenUseful": {
+        "ru": "Для оценки среднего недобора или превышения относительно выбранной цели сна.",
+        "en": "To quantify average shortfall or surplus relative to a chosen sleep target."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [
+        "aasmSleep"
+      ],
+      "keywords": [],
+      "visualization": "delta",
+      "related": [
+        "sleep-duration",
+        "sleep-efficiency",
+        "caffeine-remaining",
+        "sleep-midpoint"
+      ]
+    },
+    {
+      "id": "sleep-midpoint",
+      "category": "recovery",
+      "featured": false,
+      "title": {
+        "ru": "Середина сна",
+        "en": "Sleep midpoint"
+      },
+      "description": {
+        "ru": "Середина интервала между отбоем и подъёмом.",
+        "en": "Midpoint between bedtime and wake time."
+      },
+      "whenUseful": {
+        "ru": "Для сравнения положения сна во времени между днями или периодами.",
+        "en": "For comparing where sleep sits in clock time across days or periods."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "sleep-duration",
+        "sleep-gap",
+        "sleep-efficiency",
+        "caffeine-remaining"
+      ]
+    },
+    {
+      "id": "social-jetlag",
+      "category": "recovery",
+      "featured": false,
+      "title": {
+        "ru": "Социальный джетлаг",
+        "en": "Social jetlag"
+      },
+      "description": {
+        "ru": "Разница середины сна в рабочие и свободные дни.",
+        "en": "Difference in sleep midpoint between work and free days."
+      },
+      "whenUseful": {
+        "ru": "Чтобы увидеть сдвиг середины сна между рабочими и свободными днями.",
+        "en": "To see the shift in sleep midpoint between work and free days."
+      },
+      "methodType": "heuristic",
+      "evidenceStrength": "moderate",
+      "sources": [],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "sleep-duration",
+        "sleep-gap",
+        "sleep-efficiency",
+        "caffeine-remaining"
+      ]
+    },
+    {
+      "id": "sleep-efficiency",
+      "category": "recovery",
+      "featured": false,
+      "title": {
+        "ru": "Эффективность сна",
+        "en": "Sleep efficiency"
+      },
+      "description": {
+        "ru": "Доля времени в постели, проведённая во сне.",
+        "en": "Share of time in bed spent asleep."
+      },
+      "whenUseful": {
+        "ru": "Когда отдельно известны время сна и время в постели и нужна их арифметическая доля.",
+        "en": "When sleep time and time in bed are separately known and their ratio is useful."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "sleep-duration",
+        "sleep-gap",
+        "caffeine-remaining",
+        "sleep-midpoint"
+      ]
+    },
+    {
+      "id": "caffeine-remaining",
+      "category": "recovery",
+      "featured": true,
+      "title": {
+        "ru": "Остаток кофеина",
+        "en": "Caffeine remaining"
+      },
+      "description": {
+        "ru": "Модель экспоненциального распада по периоду полувыведения.",
+        "en": "Exponential decay model using a selected half-life."
+      },
+      "whenUseful": {
+        "ru": "Для сравнения сценариев времени приёма кофеина с выбранным периодом полувыведения.",
+        "en": "For comparing caffeine-timing scenarios under a chosen half-life."
+      },
+      "methodType": "heuristic",
+      "evidenceStrength": "limited",
+      "sources": [
+        "efsaCaffeine"
+      ],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "sleep-duration",
+        "sleep-gap",
+        "sleep-efficiency",
+        "sleep-midpoint"
+      ]
+    },
+    {
+      "id": "readiness",
+      "category": "recovery",
+      "featured": false,
+      "title": {
+        "ru": "Субъективная готовность",
+        "en": "Subjective readiness"
+      },
+      "description": {
+        "ru": "Прозрачная эвристика из сна, болезненности, стресса и мотивации.",
+        "en": "Transparent heuristic from sleep, soreness, stress and motivation."
+      },
+      "whenUseful": {
+        "ru": "Для структурированной саморефлексии по четырём компонентам перед изменением тренировки.",
+        "en": "For structured reflection on four components before changing a training session."
+      },
+      "methodType": "heuristic",
+      "evidenceStrength": "limited",
+      "sources": [],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "sleep-duration",
+        "sleep-gap",
+        "sleep-efficiency",
+        "caffeine-remaining"
+      ]
+    },
+    {
+      "id": "focus-ratio",
+      "category": "mind",
+      "featured": false,
+      "title": {
+        "ru": "Доля сфокусированного времени",
+        "en": "Focus ratio"
+      },
+      "description": {
+        "ru": "Фокус-время относительно доступного рабочего времени.",
+        "en": "Focused time relative to available work time."
+      },
+      "whenUseful": {
+        "ru": "Чтобы увидеть долю доступного времени, реально защищённую под фокус-работу.",
+        "en": "To see the share of available time actually protected for focused work."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "time-budget",
+        "habit-adherence",
+        "decision-matrix",
+        "goal-progress"
+      ]
+    },
+    {
+      "id": "habit-adherence",
+      "category": "mind",
+      "featured": false,
+      "title": {
+        "ru": "Соблюдение привычки",
+        "en": "Habit adherence"
+      },
+      "description": {
+        "ru": "Выполнения относительно запланированных повторов.",
+        "en": "Completions relative to planned repetitions."
+      },
+      "whenUseful": {
+        "ru": "Для проверки выполнимости плана по отношению фактических повторов к запланированным.",
+        "en": "To check plan feasibility by comparing completed with planned repetitions."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "time-budget",
+        "focus-ratio",
+        "decision-matrix",
+        "goal-progress"
+      ]
+    },
+    {
+      "id": "goal-progress",
+      "category": "mind",
+      "featured": false,
+      "title": {
+        "ru": "Прогресс цели",
+        "en": "Goal progress"
+      },
+      "description": {
+        "ru": "Текущая величина относительно цели.",
+        "en": "Current amount relative to target."
+      },
+      "whenUseful": {
+        "ru": "Для линейной количественной цели с естественным нулём и понятной конечной величиной.",
+        "en": "For a linear quantitative goal with a meaningful zero and clear endpoint."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "time-budget",
+        "focus-ratio",
+        "habit-adherence",
+        "decision-matrix"
+      ]
+    },
+    {
+      "id": "time-budget",
+      "category": "mind",
+      "featured": false,
+      "title": {
+        "ru": "Недельный бюджет времени",
+        "en": "Weekly time budget"
+      },
+      "description": {
+        "ru": "Остаток 168 часов после сна, работы и обязательств.",
+        "en": "Remaining hours from 168 after sleep, work and commitments."
+      },
+      "whenUseful": {
+        "ru": "Чтобы увидеть остаток недельных часов после непересекающихся крупных обязательств.",
+        "en": "To see remaining weekly hours after non-overlapping major commitments."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "focus-ratio",
+        "habit-adherence",
+        "decision-matrix",
+        "goal-progress"
+      ]
+    },
+    {
+      "id": "life-balance",
+      "category": "mind",
+      "featured": false,
+      "title": {
+        "ru": "Баланс сфер",
+        "en": "Life-domain balance"
+      },
+      "description": {
+        "ru": "Рефлексивный индекс разброса четырёх оценок.",
+        "en": "Reflective index from the spread of four ratings."
+      },
+      "whenUseful": {
+        "ru": "Для поиска наиболее неоднородной субъективной оценки сфер, а не для общей оценки благополучия.",
+        "en": "For spotting uneven subjective domain ratings, not for an overall wellbeing score."
+      },
+      "methodType": "heuristic",
+      "evidenceStrength": "limited",
+      "sources": [],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "time-budget",
+        "focus-ratio",
+        "habit-adherence",
+        "decision-matrix"
+      ]
+    },
+    {
+      "id": "decision-matrix",
+      "category": "mind",
+      "featured": true,
+      "title": {
+        "ru": "Матрица решения",
+        "en": "Decision matrix"
+      },
+      "description": {
+        "ru": "Impact × confidence ÷ (effort + risk).",
+        "en": "Impact × confidence ÷ (effort + risk)."
+      },
+      "whenUseful": {
+        "ru": "Для последовательного сравнения нескольких вариантов по одинаковым субъективным критериям.",
+        "en": "For consistently comparing several options with the same subjective criteria."
+      },
+      "methodType": "heuristic",
+      "evidenceStrength": "limited",
+      "sources": [],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "time-budget",
+        "focus-ratio",
+        "habit-adherence",
+        "goal-progress"
+      ]
+    },
+    {
+      "id": "priority-score",
+      "category": "mind",
+      "featured": false,
+      "title": {
+        "ru": "Приоритет действия",
+        "en": "Action priority"
+      },
+      "description": {
+        "ru": "Ожидаемый эффект с поправкой на уверенность и стоимость.",
+        "en": "Expected impact adjusted for confidence and cost."
+      },
+      "whenUseful": {
+        "ru": "Чтобы ранжировать действия по ожидаемому эффекту, уверенности и усилию, сохраняя субъективность видимой.",
+        "en": "To rank actions by expected impact, confidence and effort while keeping subjectivity visible."
+      },
+      "methodType": "heuristic",
+      "evidenceStrength": "limited",
+      "sources": [],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "time-budget",
+        "focus-ratio",
+        "habit-adherence",
+        "decision-matrix"
+      ]
+    },
+    {
+      "id": "compound-interest",
+      "category": "money",
+      "featured": true,
+      "title": {
+        "ru": "Сложный процент",
+        "en": "Compound interest"
+      },
+      "description": {
+        "ru": "Капитал с регулярными взносами и капитализацией.",
+        "en": "Capital with recurring contributions and compounding."
+      },
+      "whenUseful": {
+        "ru": "Для сравнения долгосрочных сценариев капитала при постоянной ставке и регулярных взносах.",
+        "en": "For comparing long-term capital scenarios under a constant return and regular contributions."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "scenario",
+      "related": [
+        "savings-rate",
+        "runway",
+        "real-return",
+        "net-worth"
+      ]
+    },
+    {
+      "id": "savings-rate",
+      "category": "money",
+      "featured": false,
+      "title": {
+        "ru": "Норма сбережений",
+        "en": "Savings rate"
+      },
+      "description": {
+        "ru": "Доля дохода, направленная в сбережения.",
+        "en": "Share of income directed to savings."
+      },
+      "whenUseful": {
+        "ru": "Чтобы измерить долю дохода, направленную в сбережения за один согласованный период.",
+        "en": "To measure the share of income saved over one consistent period."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "runway",
+        "compound-interest",
+        "real-return",
+        "net-worth"
+      ]
+    },
+    {
+      "id": "runway",
+      "category": "money",
+      "featured": true,
+      "title": {
+        "ru": "Финансовая автономность",
+        "en": "Financial runway"
+      },
+      "description": {
+        "ru": "На сколько месяцев хватит ликвидного резерва.",
+        "en": "Months covered by liquid reserves."
+      },
+      "whenUseful": {
+        "ru": "Для стресс-сценария количества месяцев, покрываемых ликвидным резервом без нового дохода.",
+        "en": "For a stress scenario of months covered by liquid reserves without new income."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "scenario",
+      "related": [
+        "savings-rate",
+        "compound-interest",
+        "real-return",
+        "net-worth"
+      ]
+    },
+    {
+      "id": "net-worth",
+      "category": "money",
+      "featured": false,
+      "title": {
+        "ru": "Чистый капитал",
+        "en": "Net worth"
+      },
+      "description": {
+        "ru": "Активы минус обязательства.",
+        "en": "Assets minus liabilities."
+      },
+      "whenUseful": {
+        "ru": "Чтобы получить датированный снимок активов минус обязательства и сравнивать его во времени.",
+        "en": "To create a dated assets-minus-liabilities snapshot for comparison over time."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "delta",
+      "related": [
+        "savings-rate",
+        "runway",
+        "compound-interest",
+        "real-return"
+      ]
+    },
+    {
+      "id": "hourly-value",
+      "category": "money",
+      "featured": false,
+      "title": {
+        "ru": "Стоимость часа",
+        "en": "Hourly value"
+      },
+      "description": {
+        "ru": "Доход относительно затраченного времени.",
+        "en": "Income relative to time spent."
+      },
+      "whenUseful": {
+        "ru": "Для сравнения дохода на час при одинаковом учёте оплачиваемого и неоплачиваемого времени.",
+        "en": "For comparing income per hour under consistent treatment of paid and unpaid time."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "savings-rate",
+        "runway",
+        "compound-interest",
+        "real-return"
+      ]
+    },
+    {
+      "id": "roi",
+      "category": "money",
+      "featured": false,
+      "title": {
+        "ru": "ROI",
+        "en": "Return on investment"
+      },
+      "description": {
+        "ru": "Доходность относительно вложений.",
+        "en": "Return relative to investment cost."
+      },
+      "whenUseful": {
+        "ru": "Для арифметического сравнения итоговой ценности с вложением за одинаковый период.",
+        "en": "For arithmetic comparison of final value with cost over the same period."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "savings-rate",
+        "runway",
+        "compound-interest",
+        "real-return"
+      ]
+    },
+    {
+      "id": "payback",
+      "category": "money",
+      "featured": false,
+      "title": {
+        "ru": "Срок окупаемости",
+        "en": "Payback period"
+      },
+      "description": {
+        "ru": "Месяцы до покрытия затрат постоянным потоком.",
+        "en": "Months to recover cost from constant cash flow."
+      },
+      "whenUseful": {
+        "ru": "Чтобы оценить простой срок покрытия затрат постоянным чистым месячным потоком.",
+        "en": "To estimate simple recovery time from a constant monthly net cash flow."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "scenario",
+      "related": [
+        "savings-rate",
+        "runway",
+        "compound-interest",
+        "real-return"
+      ]
+    },
+    {
+      "id": "cagr",
+      "category": "money",
+      "featured": false,
+      "title": {
+        "ru": "CAGR",
+        "en": "Compound annual growth rate"
+      },
+      "description": {
+        "ru": "Среднегодовой сложный темп роста.",
+        "en": "Compound annual growth rate."
+      },
+      "whenUseful": {
+        "ru": "Для приведения роста между двумя точками к эквивалентному постоянному годовому темпу.",
+        "en": "To annualize growth between two points as an equivalent constant rate."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "savings-rate",
+        "runway",
+        "compound-interest",
+        "real-return"
+      ]
+    },
+    {
+      "id": "real-return",
+      "category": "money",
+      "featured": false,
+      "title": {
+        "ru": "Реальная доходность",
+        "en": "Real return"
+      },
+      "description": {
+        "ru": "Доходность после инфляции через точную формулу.",
+        "en": "Return after inflation using the exact relation."
+      },
+      "whenUseful": {
+        "ru": "Чтобы отделить изменение покупательной способности от номинальной доходности.",
+        "en": "To separate purchasing-power change from nominal return."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "delta",
+      "related": [
+        "savings-rate",
+        "runway",
+        "compound-interest",
+        "net-worth"
+      ]
+    },
+    {
+      "id": "margin-markup",
+      "category": "money",
+      "featured": false,
+      "title": {
+        "ru": "Маржа и наценка",
+        "en": "Margin vs markup"
+      },
+      "description": {
+        "ru": "Два разных процента из цены и себестоимости.",
+        "en": "Two distinct percentages from price and cost."
+      },
+      "whenUseful": {
+        "ru": "Когда нужно не смешивать долю прибыли в цене с наценкой на себестоимость.",
+        "en": "When margin as a share of price must be distinguished from markup on cost."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "comparison",
+      "related": [
+        "savings-rate",
+        "runway",
+        "compound-interest",
+        "real-return"
+      ]
+    },
+    {
+      "id": "loan-payment",
+      "category": "money",
+      "featured": false,
+      "title": {
+        "ru": "Платёж по кредиту",
+        "en": "Loan payment"
+      },
+      "description": {
+        "ru": "Аннуитетный ежемесячный платёж, включая ставку 0%.",
+        "en": "Monthly amortizing payment, including a 0% case."
+      },
+      "whenUseful": {
+        "ru": "Для сравнения срока, ставки и фиксированного аннуитетного платежа до проверки договора.",
+        "en": "For comparing term, rate and fixed amortizing payment before reviewing a contract."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "scenario",
+      "related": [
+        "savings-rate",
+        "runway",
+        "compound-interest",
+        "real-return"
+      ]
+    },
+    {
+      "id": "debt-payoff",
+      "category": "money",
+      "featured": false,
+      "title": {
+        "ru": "Срок погашения долга",
+        "en": "Debt payoff time"
+      },
+      "description": {
+        "ru": "Месяцы до погашения при фиксированном платеже.",
+        "en": "Months to payoff with a fixed payment."
+      },
+      "whenUseful": {
+        "ru": "Чтобы увидеть, покрывает ли фиксированный платёж проценты и сколько месяцев требует сценарий.",
+        "en": "To see whether a fixed payment covers interest and how many months the scenario requires."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "scenario",
+      "related": [
+        "savings-rate",
+        "runway",
+        "compound-interest",
+        "real-return"
+      ]
+    },
+    {
+      "id": "fire-scenario",
+      "category": "money",
+      "featured": false,
+      "title": {
+        "ru": "Сценарий финансовой независимости",
+        "en": "Financial independence scenario"
+      },
+      "description": {
+        "ru": "Капитал по расходам и выбранной ставке изъятия.",
+        "en": "Capital from expenses and a selected withdrawal rate."
+      },
+      "whenUseful": {
+        "ru": "Для сравнения капитала при разных расходах и пользовательских ставках изъятия, не как универсальной цели.",
+        "en": "For comparing capital under different expenses and user-selected withdrawal rates, not as a universal target."
+      },
+      "methodType": "heuristic",
+      "evidenceStrength": "limited",
+      "sources": [],
+      "keywords": [],
+      "visualization": "scenario",
+      "related": [
+        "savings-rate",
+        "runway",
+        "compound-interest",
+        "real-return"
+      ]
+    },
+    {
+      "id": "kg-lb",
+      "category": "utility",
+      "featured": true,
+      "title": {
+        "ru": "Килограммы ↔ фунты",
+        "en": "Kilograms ↔ pounds"
+      },
+      "description": {
+        "ru": "Двусторонний конвертер массы.",
+        "en": "Two-way mass conversion."
+      },
+      "whenUseful": {
+        "ru": "Для точного переноса массы между метрическими и британскими записями.",
+        "en": "For exact transfer of mass between metric and imperial notation."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "conversion",
+      "related": [
+        "cm-in",
+        "km-mi",
+        "kcal-kj",
+        "ml-floz"
+      ]
+    },
+    {
+      "id": "cm-in",
+      "category": "utility",
+      "featured": false,
+      "title": {
+        "ru": "Сантиметры ↔ дюймы",
+        "en": "Centimeters ↔ inches"
+      },
+      "description": {
+        "ru": "Перевод длины в дюймы.",
+        "en": "Converts length to inches."
+      },
+      "whenUseful": {
+        "ru": "Для точного перевода длины перед вводом в инструмент с другой системой единиц.",
+        "en": "For exact length conversion before entering data into a tool using another unit system."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "conversion",
+      "related": [
+        "kg-lb",
+        "km-mi",
+        "kcal-kj",
+        "ml-floz"
+      ]
+    },
+    {
+      "id": "km-mi",
+      "category": "utility",
+      "featured": false,
+      "title": {
+        "ru": "Километры ↔ мили",
+        "en": "Kilometers ↔ miles"
+      },
+      "description": {
+        "ru": "Перевод расстояния в мили.",
+        "en": "Converts distance to miles."
+      },
+      "whenUseful": {
+        "ru": "Для точного перевода дистанции между километрами и милями.",
+        "en": "For exact distance conversion between kilometers and miles."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "conversion",
+      "related": [
+        "kg-lb",
+        "cm-in",
+        "kcal-kj",
+        "ml-floz"
+      ]
+    },
+    {
+      "id": "kcal-kj",
+      "category": "utility",
+      "featured": false,
+      "title": {
+        "ru": "Ккал ↔ кДж",
+        "en": "kcal ↔ kJ"
+      },
+      "description": {
+        "ru": "Перевод единиц энергии.",
+        "en": "Converts energy units."
+      },
+      "whenUseful": {
+        "ru": "Для согласования энергетической маркировки в килокалориях и килоджоулях.",
+        "en": "For reconciling energy labels expressed in kilocalories and kilojoules."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "conversion",
+      "related": [
+        "kg-lb",
+        "cm-in",
+        "km-mi",
+        "ml-floz"
+      ]
+    },
+    {
+      "id": "ml-floz",
+      "category": "utility",
+      "featured": false,
+      "title": {
+        "ru": "Миллилитры ↔ fl oz",
+        "en": "Milliliters ↔ US fl oz"
+      },
+      "description": {
+        "ru": "Перевод объёма в жидкие унции США.",
+        "en": "Converts volume to U.S. fluid ounces."
+      },
+      "whenUseful": {
+        "ru": "Для перевода объёма между миллилитрами и жидкими унциями США.",
+        "en": "For converting volume between milliliters and U.S. fluid ounces."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "conversion",
+      "related": [
+        "kg-lb",
+        "cm-in",
+        "km-mi",
+        "kcal-kj"
+      ]
+    }
+  ]
+}

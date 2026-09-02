@@ -1,0 +1,10 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+import { CALCULATORS } from '../assets/js/calculators.js';
+import { calculatorPage,profilePage,evidencePage,shell,home } from '../assets/js/renderers-v3.js';
+const state={version:2,lang:'ru',theme:'light',profile:{},favorites:[],history:[],snapshots:[],recents:[],onboardingDismissed:true};
+test('shell provides landmarks, current-page state and skip target',async()=>{const html=shell(home(state),state,{page:'home'});assert.match(html,/<nav[^>]+aria-label=/);assert.match(html,/aria-current="page"/);assert.match(html,/<main[^>]+id="main"/);const index=await readFile(new URL('../index.html',import.meta.url),'utf8');assert.match(index,/class="skip-link" href="#main"/)});
+test('calculator controls have labels, descriptions and error targets',()=>{for(const c of CALCULATORS){const html=calculatorPage(c,state,null,null,{});for(const f of c.fields){assert.match(html,new RegExp(`label for="f-${f.id}"`));assert.match(html,new RegExp(`id="f-${f.id}"`));assert.match(html,new RegExp(`aria-describedby="hint-${f.id} err-${f.id}"`))}}});
+test('external evidence links are isolated',()=>{const html=evidencePage(state);for(const match of html.matchAll(/<a href="https:[^"]+"([^>]*)>/g)){assert.match(match[1],/target="_blank"/);assert.match(match[1],/rel="noopener noreferrer"/)}});
+test('profile controls use native labels',()=>{const html=profilePage(state);for(const id of ['age','sex','height','weight','primaryGoal']){assert.match(html,new RegExp(`label for="p-${id}"`));assert.match(html,new RegExp(`id="p-${id}"`))}});

@@ -1,0 +1,24 @@
+{
+  "id":"./index.html",
+  "name":"MARKOVLAB — личная лаборатория измеримого прогресса",
+  "short_name":"MARKOVLAB",
+  "description":"Личная лаборатория измеримого прогресса с прозрачными формулами, видимыми ограничениями и локальными данными.",
+  "start_url":"./index.html#home",
+  "scope":"./",
+  "display":"standalone",
+  "display_override":["window-controls-overlay","standalone"],
+  "orientation":"any",
+  "background_color":"#f5f4ee",
+  "theme_color":"#173f37",
+  "lang":"ru",
+  "categories":["health","fitness","productivity","finance","utilities"],
+  "shortcuts":[
+    {"name":"Открыть лабораторию","short_name":"Лаборатория","description":"Найти расчёт по задаче или направлению","url":"./index.html#calculators","icons":[{"src":"./assets/icons/icon-192.png","sizes":"192x192","type":"image/png"}]},
+    {"name":"Личный профиль","short_name":"Профиль","description":"Изменить локальные данные для повторного использования","url":"./index.html#profile","icons":[{"src":"./assets/icons/icon-192.png","sizes":"192x192","type":"image/png"}]}
+  ],
+  "icons":[
+    {"src":"./assets/icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
+    {"src":"./assets/icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"},
+    {"src":"./assets/icons/icon-maskable-512.png","sizes":"512x512","type":"image/png","purpose":"maskable"}
+  ]
+}

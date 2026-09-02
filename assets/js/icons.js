@@ -1,0 +1,33 @@
+const paths={
+ home:'<path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10.5V21h13V10.5M9 21v-6h6v6"/>',
+ calculators:'<rect x="4" y="3" width="16" height="18" rx="3"/><path d="M8 7h8M8 12h2m4 0h2M8 16h2m4 0h2"/>',
+ insights:'<path d="m12 3 1.7 5.3L19 10l-5.3 1.7L12 17l-1.7-5.3L5 10l5.3-1.7L12 3Z"/><path d="m19 16 .7 2.3L22 19l-2.3.7L19 22l-.7-2.3L16 19l2.3-.7L19 16Z"/>',
+ workflows:'<circle cx="5" cy="6" r="2"/><circle cx="19" cy="12" r="2"/><circle cx="5" cy="18" r="2"/><path d="M7 6h5l5 6M7 18h5l5-6"/>',
+ profile:'<circle cx="12" cy="8" r="4"/><path d="M4.5 21a7.5 7.5 0 0 1 15 0"/>',
+ evidence:'<path d="M5 4h14v16H5z"/><path d="M8 8h8M8 12h8M8 16h5"/>',
+ about:'<circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10h.01"/>',
+ search:'<circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/>',
+ theme:'<path d="M20 15.5A8 8 0 1 1 8.5 4 6.5 6.5 0 0 0 20 15.5Z"/>',
+ data:'<path d="M12 3v12m0-12 4 4m-4-4L8 7"/><path d="M5 14v6h14v-6"/>',
+ star:'<path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9L12 3Z"/>',
+ arrow:'<path d="M5 12h14m-5-5 5 5-5 5"/>',
+ external:'<path d="M14 4h6v6m0-6-9 9"/><path d="M18 13v7H4V6h7"/>',
+ close:'<path d="m5 5 14 14M19 5 5 19"/>',
+ check:'<path d="m4 12 5 5L20 6"/>',
+ lock:'<rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/>',
+ chart:'<path d="M4 20V10m6 10V4m6 16v-7m4 7H2"/>',
+ reset:'<path d="M4 7v5h5"/><path d="M5.5 16a8 8 0 1 0 .5-9l-2 5"/>',
+ copy:'<rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V4H4v12h4"/>',
+ print:'<path d="M7 8V3h10v5M7 17H4V9h16v8h-3M7 14h10v7H7z"/>',
+ body:'<circle cx="12" cy="6" r="2.5"/><path d="M8 21l1-7-2-4h10l-2 4 1 7M9 10l3 4 3-4"/>',
+ energy:'<path d="m13 2-8 12h7l-1 8 8-12h-7l1-8Z"/>',
+ nutrition:'<circle cx="12" cy="12" r="9"/><path d="M12 3v9l7.8 4.5M12 12 5.5 18"/>',
+ strength:'<path d="M3 10v4m3-7v10m12-7v4m-3-7v10M6 12h12"/>',
+ cardio:'<path d="M3 12h4l2-5 4 10 2-5h6"/>',
+ recovery:'<path d="M20 15.5A8 8 0 1 1 8.5 4 6.5 6.5 0 0 0 20 15.5Z"/>',
+ mind:'<circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2M12 2v2m0 16v2M2 12h2m16 0h2"/>',
+ money:'<path d="M4 20V9l8-5 8 5v11M2 20h20M8 10v7m4-7v7m4-7v7"/>',
+ utility:'<path d="M5 7h14m-4-4 4 4-4 4M19 17H5m4-4-4 4 4 4"/>'
+};
+export const icon=(name,label='')=>`<svg class="icon icon-${name}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" ${label?`role="img" aria-label="${label}"`:'aria-hidden="true"'}>${paths[name]||paths.about}</svg>`;
+export const logo=(compact=false,subtitle='MEASURABLE PROGRESS')=>`<span class="brand-symbol" aria-hidden="true"><svg viewBox="0 0 44 44"><path class="logo-orbit" d="M7 35V9l15 16L37 9v26"/><path class="logo-axis" d="M7 38h30M11 35v6M22 35v6M33 35v6"/><circle class="logo-point" cx="37" cy="9" r="3"/></svg></span>${compact?'':`<span class="brand-word"><b>MARKOVLAB</b><small>${subtitle}</small></span>`}`;

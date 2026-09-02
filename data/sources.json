@@ -1,0 +1,330 @@
+{
+  "schemaVersion": 1,
+  "accessed": "2026-08-15",
+  "sources": {
+    "fatGainWorkbook": {
+      "title": {
+        "ru": "Рабочая модель MARKOVLAB: избыток энергии и жировой эквивалент",
+        "en": "MARKOVLAB working model: energy surplus and fat-equivalent"
+      },
+      "type": {
+        "ru": "Пользовательская модель с provenance",
+        "en": "User-provided model with provenance"
+      },
+      "url": "./docs/FAT_GAIN_MODEL_PROVENANCE.md",
+      "year": 2026,
+      "accessed": "2026-08-25",
+      "primary": false,
+      "note": {
+        "ru": "Перенос формул из предоставленного workbook; это модельный ориентир, а не измерение состава тела.",
+        "en": "Formula transcription from the supplied workbook; a model estimate, not a body-composition measurement."
+      }
+    },
+    "whoBmi": {
+      "title": {
+        "ru": "ВОЗ: использование и интерпретация антропометрии",
+        "en": "WHO: Use and interpretation of anthropometry"
+      },
+      "type": {
+        "ru": "Официальный стандарт",
+        "en": "Official standard"
+      },
+      "url": "https://apps.who.int/nutrition/landscape/help.aspx?helpid=420&menu=0",
+      "year": 1995,
+      "accessed": "2026-08-15",
+      "primary": true,
+      "note": {
+        "ru": "Определение BMI и популяционные пороги для взрослых.",
+        "en": "BMI definition and population cut-offs for adults."
+      }
+    },
+    "whoWaist": {
+      "title": {
+        "ru": "ВОЗ: окружность талии и отношение талия/бедро",
+        "en": "WHO: Waist circumference and waist–hip ratio"
+      },
+      "type": {
+        "ru": "Экспертный отчёт",
+        "en": "Expert report"
+      },
+      "url": "https://iris.who.int/bitstream/handle/10665/44583/9789241501491-eng.pdf?sequence=1",
+      "year": 2011,
+      "accessed": "2026-08-15",
+      "primary": true,
+      "note": {
+        "ru": "Протоколы измерения и интерпретация окружностей.",
+        "en": "Measurement protocols and interpretation of circumferences."
+      }
+    },
+    "whtrReview": {
+      "title": {
+        "ru": "WHtR как скрининговый показатель: систематический обзор",
+        "en": "WHtR as a screening tool: systematic review"
+      },
+      "type": {
+        "ru": "Систематический обзор",
+        "en": "Systematic review"
+      },
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20819243/",
+      "year": 2010,
+      "accessed": "2026-08-15",
+      "primary": true,
+      "note": {
+        "ru": "Граница 0,5 — скрининговый ориентир, не диагноз.",
+        "en": "The 0.5 boundary is a screening reference, not a diagnosis."
+      }
+    },
+    "mifflin1990": {
+      "title": {
+        "ru": "Новая формула расхода энергии покоя",
+        "en": "A new predictive equation for resting energy expenditure"
+      },
+      "type": {
+        "ru": "Оригинальная валидация",
+        "en": "Original validation"
+      },
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2305711/",
+      "year": 1990,
+      "accessed": "2026-08-15",
+      "primary": true,
+      "note": {
+        "ru": "Формула Mifflin–St Jeor для взрослых.",
+        "en": "Mifflin–St Jeor equation for adults."
+      }
+    },
+    "cunningham1991": {
+      "title": {
+        "ru": "Состав тела как детерминанта расхода энергии",
+        "en": "Body composition as a determinant of energy expenditure"
+      },
+      "type": {
+        "ru": "Синтетический обзор и уравнение",
+        "en": "Synthetic review and equation"
+      },
+      "url": "https://pubmed.ncbi.nlm.nih.gov/1957828/",
+      "year": 1991,
+      "accessed": "2026-08-15",
+      "primary": true,
+      "note": {
+        "ru": "Обобщённая оценка REE = 370 + 21,6 × FFM.",
+        "en": "General prediction equation REE = 370 + 21.6 × FFM."
+      }
+    },
+    "mosteller1987": {
+      "title": {
+        "ru": "Упрощённый расчёт площади поверхности тела",
+        "en": "Simplified calculation of body-surface area"
+      },
+      "type": {
+        "ru": "Оригинальная публикация",
+        "en": "Original publication"
+      },
+      "url": "https://pubmed.ncbi.nlm.nih.gov/3657876/",
+      "year": 1987,
+      "accessed": "2026-08-15",
+      "primary": true,
+      "note": {
+        "ru": "Формула Мостеллера.",
+        "en": "Mosteller formula."
+      }
+    },
+    "rfm2018": {
+      "title": {
+        "ru": "Relative Fat Mass: новая оценка состава тела",
+        "en": "Relative Fat Mass: a new estimator of whole-body fat percentage"
+      },
+      "type": {
+        "ru": "Оригинальная валидация",
+        "en": "Original validation"
+      },
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29641540/",
+      "year": 2018,
+      "accessed": "2026-08-15",
+      "primary": true,
+      "note": {
+        "ru": "Оценка по росту, талии и полу; не лабораторное измерение.",
+        "en": "Estimate from height, waist and sex; not a laboratory measurement."
+      }
+    },
+    "deurenberg1991": {
+      "title": {
+        "ru": "BMI как оценка процента жира: формулы по возрасту и полу",
+        "en": "BMI as a measure of body fatness: age- and sex-specific formulas"
+      },
+      "type": {
+        "ru": "Оригинальная валидация",
+        "en": "Original validation"
+      },
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2043597/",
+      "year": 1991,
+      "accessed": "2026-08-15",
+      "primary": true,
+      "note": {
+        "ru": "Популяционная формула с заметной индивидуальной ошибкой.",
+        "en": "Population equation with material individual error."
+      }
+    },
+    "navy1984": {
+      "title": {
+        "ru": "Индексы роста и веса у водолазов ВМС США",
+        "en": "Weight-height indices and percent body fat among U.S. Navy divers"
+      },
+      "type": {
+        "ru": "Валидационное исследование",
+        "en": "Validation study"
+      },
+      "url": "https://pubmed.ncbi.nlm.nih.gov/6732694/",
+      "year": 1984,
+      "accessed": "2026-08-15",
+      "primary": true,
+      "note": {
+        "ru": "Окружностная полевая оценка; техника измерения критична.",
+        "en": "Circumference field estimate; measurement technique matters."
+      }
+    },
+    "protein2017": {
+      "title": {
+        "ru": "ISSN: белок и физическая нагрузка",
+        "en": "ISSN position stand: protein and exercise"
+      },
+      "type": {
+        "ru": "Позиционный документ",
+        "en": "Position stand"
+      },
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28642676/",
+      "year": 2017,
+      "accessed": "2026-08-15",
+      "primary": true,
+      "note": {
+        "ru": "Диапазоны белка для тренирующихся взрослых.",
+        "en": "Protein ranges for exercising adults."
+      }
+    },
+    "efsaProtein": {
+      "title": {
+        "ru": "EFSA: референсные значения белка",
+        "en": "EFSA dietary reference values for protein"
+      },
+      "type": {
+        "ru": "Официальное заключение",
+        "en": "Official opinion"
+      },
+      "url": "https://www.efsa.europa.eu/sites/default/files/consultation/110712%2C0.pdf",
+      "year": 2012,
+      "accessed": "2026-08-15",
+      "primary": true,
+      "note": {
+        "ru": "Популяционные референсы потребления белка.",
+        "en": "Population dietary reference values for protein."
+      }
+    },
+    "efsaCaffeine": {
+      "title": {
+        "ru": "EFSA: безопасность кофеина",
+        "en": "EFSA: Safety of caffeine"
+      },
+      "type": {
+        "ru": "Научное заключение",
+        "en": "Scientific opinion"
+      },
+      "url": "https://www.efsa.europa.eu/en/topics/topic/caffeine",
+      "year": 2015,
+      "accessed": "2026-08-15",
+      "primary": true,
+      "note": {
+        "ru": "Для здоровых взрослых: до 200 мг за раз и 400 мг/сут обычно не вызывают опасений; не для беременности.",
+        "en": "For healthy adults, single doses up to 200 mg and 400 mg/day generally raise no safety concern; pregnancy differs."
+      }
+    },
+    "whoActivity": {
+      "title": {
+        "ru": "ВОЗ: рекомендации по физической активности",
+        "en": "WHO guidelines on physical activity"
+      },
+      "type": {
+        "ru": "Официальная рекомендация",
+        "en": "Official guideline"
+      },
+      "url": "https://www.who.int/publications/i/item/9789240015128",
+      "year": 2020,
+      "accessed": "2026-08-15",
+      "primary": true,
+      "note": {
+        "ru": "Ориентиры аэробной и силовой активности для взрослых.",
+        "en": "Aerobic and strength activity references for adults."
+      }
+    },
+    "tanaka2001": {
+      "title": {
+        "ru": "Возраст и максимальная ЧСС: мета-анализ",
+        "en": "Age-predicted maximal heart rate revisited"
+      },
+      "type": {
+        "ru": "Мета-анализ",
+        "en": "Meta-analysis"
+      },
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11153730/",
+      "year": 2001,
+      "accessed": "2026-08-15",
+      "primary": true,
+      "note": {
+        "ru": "208 − 0,7×возраст — популяционная оценка, не измеренный максимум.",
+        "en": "208 − 0.7×age is a population estimate, not a measured maximum."
+      }
+    },
+    "rockport1987": {
+      "title": {
+        "ru": "Оценка VO₂max по тесту ходьбы на 1 милю",
+        "en": "Estimation of VO₂max from a one-mile track walk"
+      },
+      "type": {
+        "ru": "Оригинальная валидация",
+        "en": "Original validation"
+      },
+      "url": "https://pubmed.ncbi.nlm.nih.gov/3600239/",
+      "year": 1987,
+      "accessed": "2026-08-15",
+      "primary": true,
+      "note": {
+        "ru": "Полевой тест; не эквивалент CPET.",
+        "en": "Field test; not equivalent to CPET."
+      }
+    },
+    "cooperValidation": {
+      "title": {
+        "ru": "Валидация полевых тестов VO₂max",
+        "en": "Validation of methods estimating maximal oxygen uptake"
+      },
+      "type": {
+        "ru": "Валидационное исследование",
+        "en": "Validation study"
+      },
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9842605/",
+      "year": 1998,
+      "accessed": "2026-08-15",
+      "primary": true,
+      "note": {
+        "ru": "Поддерживает применимость 12-минутного теста у молодых мужчин; переносимость ограничена.",
+        "en": "Supports the 12-minute test in young men; generalizability is limited."
+      }
+    },
+    "aasmSleep": {
+      "title": {
+        "ru": "AASM/SRS: рекомендуемая длительность сна взрослых",
+        "en": "AASM/SRS recommended sleep duration for adults"
+      },
+      "type": {
+        "ru": "Консенсус",
+        "en": "Consensus recommendation"
+      },
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26235159/",
+      "year": 2015,
+      "accessed": "2026-08-15",
+      "primary": true,
+      "note": {
+        "ru": "Здоровым взрослым обычно рекомендуется 7+ часов регулярно.",
+        "en": "Healthy adults should generally sleep 7+ hours regularly."
+      }
+    }
+  }
+}

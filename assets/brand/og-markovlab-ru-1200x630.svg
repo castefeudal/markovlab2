@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="t d">
+  <title id="t">MARKOVLAB — личная лаборатория измеримого прогресса</title><desc id="d">Брендовая обложка MARKOVLAB на графитовом и минеральном фоне.</desc>
+  <defs><linearGradient id="bg" x1="0" x2="1"><stop stop-color="#0e211b"/><stop offset=".63" stop-color="#173f37"/><stop offset="1" stop-color="#e8ebe3"/></linearGradient><linearGradient id="line" x1="0" x2="1"><stop stop-color="#79e2b8"/><stop offset="1" stop-color="#d4b46d"/></linearGradient></defs>
+  <rect width="1200" height="630" fill="url(#bg)"/><g opacity=".17" stroke="#d8eee4"><path d="M60 80H1140M60 160H1140M60 240H1140M60 320H1140M60 400H1140M60 480H1140M60 560H1140"/><path d="M120 40V590M240 40V590M360 40V590M480 40V590M600 40V590M720 40V590M840 40V590M960 40V590M1080 40V590"/></g>
+  <g transform="translate(76 72)" fill="none" stroke="#79e2b8" stroke-linecap="round" stroke-linejoin="round"><circle cx="34" cy="34" r="31" stroke-width="1.5"/><path d="M0 34h68M34 0v68" opacity=".45"/><path d="M14 49V19l20 20 20-20v30" stroke-width="5"/></g>
+  <text x="166" y="104" fill="#f1f6f3" font-family="Arial,sans-serif" font-size="27" font-weight="700" letter-spacing="5">MARKOVLAB</text><text x="78" y="240" fill="#f4f7f5" font-family="Arial,sans-serif" font-size="58" font-weight="700">Личная лаборатория</text><text x="78" y="310" fill="#f4f7f5" font-family="Arial,sans-serif" font-size="58" font-weight="700">измеримого прогресса</text>
+  <text x="80" y="374" fill="#b9ccc4" font-family="Arial,sans-serif" font-size="24">Прозрачные формулы · видимые ограничения · локальные данные</text>
+  <path d="M705 483c58-72 120-10 181-76s96 22 174-86" fill="none" stroke="url(#line)" stroke-width="7" stroke-linecap="round"/><g fill="#0e211b" stroke="#79e2b8" stroke-width="5"><circle cx="705" cy="483" r="12"/><circle cx="886" cy="407" r="12"/><circle cx="1060" cy="321" r="12"/></g>
+  <text x="80" y="544" fill="#d4b46d" font-family="Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="2">MEASURE → UNDERSTAND → ACT → TRACK</text>
+</svg>
