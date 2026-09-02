@@ -74,7 +74,7 @@ export const WORKFLOWS=[
 ];
 
 export const workflowMap=new Map(WORKFLOWS.map(workflow=>[workflow.id,workflow]));
-const KEY='markovlab-active-workflow-v1';
+const KEY='markovlab2-active-workflow-v1';
 
 const safeRun=raw=>{
   if(!raw||typeof raw!=='object'||Array.isArray(raw))return null;

@@ -1,7 +1,7 @@
-import { normalizeImport } from './validators.js?v=5.4.0-r4';
+import { normalizeImport } from './validators.js?v=6.0.0-r1';
 
-const KEY = 'markovlab-state-v4';
-const LEGACY_KEYS = ['markovlab-state-v3','markovlab-state-v2','markovlab-state-v1'];
+const KEY = 'markovlab2-state-v4';
+const LEGACY_KEYS = [];
 export const THEME_PREFERENCES = Object.freeze(['system','light','paper','dark','midnight']);
 const THEMES = new Set(THEME_PREFERENCES);
 const uid = () => globalThis.crypto?.randomUUID?.() || `ml-${Date.now().toString(36)}-${Math.random().toString(36).slice(2,10)}`;
@@ -29,7 +29,7 @@ export function loadState(){
   return state;
 }
 export function saveState(state){localStorage.setItem(KEY,JSON.stringify({...state,version:4}))}
-export function exportState(state){return JSON.stringify({...state,version:4,exportedAt:new Date().toISOString(),product:'MARKOVLAB'},null,2)}
+export function exportState(state){return JSON.stringify({...state,version:4,exportedAt:new Date().toISOString(),product:'MARKOVLAB',app:'markovlab2'},null,2)}
 export function importState(text,ids){if(typeof text!=='string'||text.length>2_000_000)throw new Error('Import too large');return normalizeImport(JSON.parse(text),ids)}
 export function clearState(){localStorage.removeItem(KEY);for(const key of LEGACY_KEYS)localStorage.removeItem(key)}
 export function addHistory(state,record){state.history=[...state.history,{...record,id:uid(),at:new Date().toISOString()}].slice(-200);saveState(state)}

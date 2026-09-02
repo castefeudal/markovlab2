@@ -1,1 +1,1 @@
-export { DEFAULT_STATE, migrateState, loadState, saveState, exportState, importState, clearState, addHistory, addSnapshot, touchRecent } from './storage.js?v=5.4.0-r4';
+export { DEFAULT_STATE, migrateState, loadState, saveState, exportState, importState, clearState, addHistory, addSnapshot, touchRecent } from './storage.js?v=6.0.0-r1';

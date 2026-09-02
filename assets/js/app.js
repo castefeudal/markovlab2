@@ -1,16 +1,16 @@
-import { CALCULATORS, calculatorMap } from './calculators.js?v=5.4.0-r4';
-import { loadState, saveState, exportState, importState, clearState, addHistory, addSnapshot, touchRecent, normalizeTheme, THEME_PREFERENCES } from './storage.js?v=5.4.0-r4';
-import { route } from './router.js?v=5.4.0-r4';
-import { validateFields } from './validators.js?v=5.4.0-r4';
-import { categories, methodLabels, l, t, formatUnit } from './i18n.js?v=5.4.0-r4';
-import { shell, home, calculatorsPage, workflowsPage, categoryPage, calculatorPage, profilePage, insightsPage, evidencePage, aboutPage, notFoundPage, onboarding, paletteHtml } from './renderers-v3.js?v=5.4.0-r4';
-import { RELEASE_CONFIG } from './config.js?v=5.4.0-r4';
-import { applyResultGuidance } from './content.js?v=5.4.0-r4';
-import { startWorkflow, clearWorkflowRun, recordWorkflowOutput, advanceWorkflow, workflowMap } from './workflows.js?v=5.4.0-r4';
+import { CALCULATORS, calculatorMap } from './calculators.js?v=6.0.0-r1';
+import { loadState, saveState, exportState, importState, clearState, addHistory, addSnapshot, touchRecent, normalizeTheme, THEME_PREFERENCES } from './storage.js?v=6.0.0-r1';
+import { route } from './router.js?v=6.0.0-r1';
+import { validateFields } from './validators.js?v=6.0.0-r1';
+import { categories, methodLabels, l, t, formatUnit } from './i18n.js?v=6.0.0-r1';
+import { shell, home, calculatorsPage, workflowsPage, categoryPage, calculatorPage, profilePage, insightsPage, evidencePage, aboutPage, notFoundPage, onboarding, paletteHtml } from './renderers-v3.js?v=6.0.0-r1';
+import { RELEASE_CONFIG } from './config.js?v=6.0.0-r1';
+import { applyResultGuidance } from './content.js?v=6.0.0-r1';
+import { startWorkflow, clearWorkflowRun, recordWorkflowOutput, advanceWorkflow, workflowMap } from './workflows.js?v=6.0.0-r1';
 
 let state=loadState(),results=new Map(),errors=new Map(),calcModes=new Map(),proScenarios=new Map(),baselineInputs=new Map(),libraryQuery='',libraryView='recommended',paletteQuery='',paletteIndex=0,historyQuery='',historySort='newest',evidenceQuery='',onboardingStep=1,deferredInstall=null,pendingWorker=null;
 const app=document.querySelector('#app'),palette=document.querySelector('#palette'),importFile=document.querySelector('#import-file'),toast=document.querySelector('#toast'),onboardingDialog=document.querySelector('#onboarding'),confirmDialog=document.querySelector('#confirm-dialog');
-const draftKey=id=>`markovlab-draft-${id}`;
+const draftKey=id=>`markovlab2-draft-${id}`;
 const loadDraft=id=>{try{return JSON.parse(sessionStorage.getItem(draftKey(id))||'null')}catch{return null}};
 const saveDraft=(id,v)=>{try{sessionStorage.setItem(draftKey(id),JSON.stringify(v))}catch{}}
 const clearDraft=id=>sessionStorage.removeItem(draftKey(id));
@@ -98,7 +98,7 @@ app.addEventListener('click',async e=>{
  if(action==='palette')openPalette();
  if(action==='lang')changeLanguage(state.lang==='ru'?'en':'ru')
  if(action==='theme'){const index=THEME_PREFERENCES.indexOf(normalizeTheme(state.theme));setTheme(THEME_PREFERENCES[(index+1)%THEME_PREFERENCES.length])}
- if(action==='export'){download(`markovlab-export-${new Date().toISOString().slice(0,10)}.json`,exportState(state));notify(t('exportSuccess',state.lang),'success')}
+ if(action==='export'){download(`markovlab2-export-${new Date().toISOString().slice(0,10)}.json`,exportState(state));notify(t('exportSuccess',state.lang),'success')}
  if(action==='import')importFile.click();
  if(action==='print')print();
  if(action==='clear-data'&&await confirmAction(t('clear',state.lang),t('confirmClear',state.lang),t('clear',state.lang))){clearState();clearWorkflowRun();state=loadState();results.clear();errors.clear();render();notify(t('clear',state.lang),'success')}
@@ -123,7 +123,7 @@ onboardingDialog.addEventListener('click',e=>{const step=e.target.closest('[data
 toast.addEventListener('click',e=>{if(e.target.closest('[data-action="apply-update"]')&&pendingWorker)pendingWorker.postMessage({type:'SKIP_WAITING'})});
 importFile.addEventListener('change',async()=>{const file=importFile.files?.[0];if(!file)return;try{if(file.size>2_000_000)throw new Error('large');const next=importState(await file.text(),new Set(CALCULATORS.map(c=>c.id)));const ok=await confirmAction(t('import',state.lang),`${t('importPreview',state.lang)} ${Object.keys(next.profile).length} ${t('profile',state.lang).toLowerCase()} · ${next.history.length} ${t('saved',state.lang)}`,t('import',state.lang),false);if(ok){state=next;persist();render();notify(t('imported',state.lang),'success')}}catch{notify(t('importError',state.lang),'error')}finally{importFile.value=''}});
 matchMedia('(prefers-color-scheme: dark)').addEventListener?.('change',()=>{if(state.theme==='system')applyTheme()});
-addEventListener('storage',event=>{if(event.key==='markovlab-state-v4'){state=loadState();applyTheme();render()}});
+addEventListener('storage',event=>{if(event.key==='markovlab2-state-v4'){state=loadState();applyTheme();render()}});
 
 if(RELEASE_CONFIG.productionBaseUrl){const base=RELEASE_CONFIG.productionBaseUrl.replace(/\/$/,'');let canonical=document.querySelector('link[rel="canonical"]');if(!canonical){canonical=document.createElement('link');canonical.rel='canonical';document.head.append(canonical)}canonical.href=base+'/';for(const selector of ['meta[property="og:url"]','meta[name="twitter:url"]']){let meta=document.querySelector(selector);if(!meta){meta=document.createElement('meta');const isOg=selector.includes('property');meta.setAttribute(isOg?'property':'name',isOg?'og:url':'twitter:url');document.head.append(meta)}meta.content=base+'/'}}
 applyTheme();render();

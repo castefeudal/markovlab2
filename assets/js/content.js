@@ -98,7 +98,19 @@ export const WHEN_USEFUL={
   'cm-in':bi('Для точного перевода длины перед вводом в инструмент с другой системой единиц.','For exact length conversion before entering data into a tool using another unit system.'),
   'km-mi':bi('Для точного перевода дистанции между километрами и милями.','For exact distance conversion between kilometers and miles.'),
   'kcal-kj':bi('Для согласования энергетической маркировки в килокалориях и килоджоулях.','For reconciling energy labels expressed in kilocalories and kilojoules.'),
-  'ml-floz':bi('Для перевода объёма между миллилитрами и жидкими унциями США.','For converting volume between milliliters and U.S. fluid ounces.')
+  'ml-floz':bi('Для перевода объёма между миллилитрами и жидкими унциями США.','For converting volume between milliliters and U.S. fluid ounces.'),
+
+  'katch-mcardle':bi('Когда известен процент жира и нужен расход энергии покоя из безжировой массы, а не из полного веса.','When body-fat percentage is known and resting energy expenditure should come from lean mass rather than total weight.'),
+  'harris-benedict-revised':bi('Для расчёта BMR по пересмотренным уравнениям Харриса–Бенедикта, когда нужна вторая независимая оценка для сравнения.','When you need a BMR from the revised Harris–Benedict equations as a second independent estimate to compare against.'),
+  'rmr-comparison':bi('Когда нужно увидеть разброс оценок расхода энергии покоя между методами и понять, какой вход сильнее всего влияет на разброс.','When you want to see how resting-energy estimates diverge between methods and which input drives the spread.'),
+  'macro-planner':bi('Чтобы распределить известную калорийность по белку и жиру и проверить, что комбинация вообще выполнима.','To split a known calorie budget across protein and fat and check that the combination is feasible at all.'),
+  'warmup-planner':bi('Для планирования разминочных подходов под рабочий вес со штангой перед основными подходами.','For planning ramp-up sets under a barbell working weight before the main sets.'),
+  'split-table':bi('Когда нужно целевое время разбить на контрольные отрезки по дистанции для ровного распределения сил.','When a target time needs to be broken into cumulative splits so effort can be paced evenly.'),
+  npv:bi('Когда поток денег растянут по годам и нужно сравнить его ценность в сегодняшних деньгах с вложенной суммой.','When a cash-flow stream spans years and you need its value in today’s money compared with the invested amount.'),
+  irr:bi('Когда нужно выразить доходность вложения одной ставкой и сопоставить её с требуемой доходностью.','When you want an investment return expressed as one rate and compared against your required rate.'),
+  'loan-amortization':bi('Для полной стоимости кредита: платёж, всего выплачено и сколько из этого проценты.','For the full cost of a loan: the payment, total paid and how much of it is interest.'),
+  'break-even':bi('Когда нужно знать, при каком объёме продаж постоянные расходы окупаются.','When you need to know at what sales volume the fixed costs are covered.'),
+  'inflation-power':bi('Чтобы перевести сегодняшнюю сумму в её покупательную способность через годы при выбранной инфляции.','To translate today’s amount into its purchasing power years later at a chosen inflation rate.'),
 };
 
 // Overrides are deliberately limited to results that previously fell back to
@@ -174,11 +186,11 @@ export function applyResultGuidance(calc,result){
 
 const strategy={
   range:new Set(['bmi-range','protein-range','fat-range','tef','hrr-zones','ftp-zones']),
-  composition:new Set(['body-composition','macro-calories']),
-  comparison:new Set(['e1rm','margin-markup']),
+  composition:new Set(['body-composition','macro-calories','macro-planner']),
+  comparison:new Set(['e1rm','margin-markup','rmr-comparison']),
   delta:new Set(['weight-change','weekly-weight-trend','sleep-gap','real-return','net-worth']),
   conversion:new Set(['pace','speed','race-time','steps-distance','cadence-speed','kg-lb','cm-in','km-mi','kcal-kj','ml-floz']),
-  scenario:new Set(['calorie-target','fat-gain-surplus','compound-interest','loan-payment','debt-payoff','fire-scenario','runway','payback'])
+  scenario:new Set(['calorie-target','fat-gain-surplus','compound-interest','loan-payment','debt-payoff','fire-scenario','runway','payback','loan-amortization','inflation-power','npv'])
 };
 export const visualizationType=id=>Object.entries(strategy).find(([,ids])=>ids.has(id))?.[0]||'exact';
 

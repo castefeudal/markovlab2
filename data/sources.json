@@ -308,6 +308,24 @@
         "en": "Supports the 12-minute test in young men; generalizability is limited."
       }
     },
+    "roza1984": {
+      "title": {
+        "ru": "Пересмотренные уравнения Харриса–Бенедикта",
+        "en": "The Harris–Benedict equations re-examined"
+      },
+      "type": {
+        "ru": "Оригинальная публикация",
+        "en": "Original publication"
+      },
+      "url": "https://pubmed.ncbi.nlm.nih.gov/6378117/",
+      "year": 1984,
+      "accessed": "2026-09-02",
+      "primary": true,
+      "note": {
+        "ru": "Roza & Shizgal: пересчитанные коэффициенты BMR; версия формулы, а не исходная 1919 года.",
+        "en": "Roza & Shizgal: restated BMR coefficients; the revised variant, not the original 1919 equation."
+      }
+    },
     "aasmSleep": {
       "title": {
         "ru": "AASM/SRS: рекомендуемая длительность сна взрослых",

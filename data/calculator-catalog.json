@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "count": 86,
+  "count": 97,
   "domains": {
     "body": {
       "asset": "./assets/images/domains/body.webp",
@@ -1108,8 +1108,8 @@
         "en": "Estimated 1RM"
       },
       "description": {
-        "ru": "Сравнение формул Epley и Brzycki.",
-        "en": "Compares Epley and Brzycki estimates."
+        "ru": "Четыре признанных формулы рядом — диапазон, а не одно «точное» число.",
+        "en": "Four established formulas side by side — a range, not one authoritative number."
       },
       "whenUseful": {
         "ru": "Для планирования рабочих весов по качественному многоповторному подходу без теста фактического 1ПМ.",
@@ -1120,7 +1120,9 @@
       "sources": [],
       "keywords": [
         "1rm",
-        "one rep max"
+        "one rep max",
+        "разовый максимум",
+        "пас"
       ],
       "visualization": "comparison",
       "related": [
@@ -2628,6 +2630,377 @@
         "cm-in",
         "km-mi",
         "kcal-kj"
+      ]
+    },
+    {
+      "id": "warmup-planner",
+      "category": "strength",
+      "featured": false,
+      "title": {
+        "ru": "Планец разминки со штангой",
+        "en": "Barbell warm-up plan"
+      },
+      "description": {
+        "ru": "Последовательность разгрузочных подходов под рабочий вес.",
+        "en": "A ramp of lighter sets leading into your working weight."
+      },
+      "whenUseful": {
+        "ru": "Для планирования разминочных подходов под рабочий вес со штангой перед основными подходами.",
+        "en": "For planning ramp-up sets under a barbell working weight before the main sets."
+      },
+      "methodType": "heuristic",
+      "evidenceStrength": "limited",
+      "sources": [],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "e1rm",
+        "load-percent",
+        "volume-load",
+        "weekly-tonnage"
+      ]
+    },
+    {
+      "id": "split-table",
+      "category": "cardio",
+      "featured": false,
+      "title": {
+        "ru": "Таблица отрезков",
+        "en": "Race split table"
+      },
+      "description": {
+        "ru": "Темп, скорость и контрольные отрезки для дистанции и целевого времени.",
+        "en": "Pace, speed and cumulative splits for a distance and target time."
+      },
+      "whenUseful": {
+        "ru": "Когда нужно целевое время разбить на контрольные отрезки по дистанции для ровного распределения сил.",
+        "en": "When a target time needs to be broken into cumulative splits so effort can be paced evenly."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "pace",
+        "race-time",
+        "riegel",
+        "aerobic-volume"
+      ]
+    },
+    {
+      "id": "katch-mcardle",
+      "category": "energy",
+      "featured": false,
+      "title": {
+        "ru": "Рециркуляция покоя по безжировой массе",
+        "en": "RMR from lean body mass"
+      },
+      "description": {
+        "ru": "Оценка расхода энергии покоя по безжировой массе (Кэтч–МакАрдл / Cunningham).",
+        "en": "Resting-energy estimate from lean body mass (Katch–McArdle / Cunningham form)."
+      },
+      "whenUseful": {
+        "ru": "Когда известен процент жира и нужен расход энергии покоя из безжировой массы, а не из полного веса.",
+        "en": "When body-fat percentage is known and resting energy expenditure should come from lean mass rather than total weight."
+      },
+      "methodType": "validated-estimate",
+      "evidenceStrength": "moderate",
+      "sources": [
+        "cunningham1991"
+      ],
+      "keywords": [
+        "katch",
+        "mcardle",
+        "rmr",
+        "lean mass",
+        "безжировая масса",
+        "метаболизм покоя",
+        "расход энергии покоя"
+      ],
+      "visualization": "exact",
+      "related": [
+        "mifflin",
+        "tdee",
+        "calorie-target",
+        "observed-tdee"
+      ]
+    },
+    {
+      "id": "harris-benedict-revised",
+      "category": "energy",
+      "featured": false,
+      "title": {
+        "ru": "Базовый обмен, Харрис–Бенедикт (ред.)",
+        "en": "Basal metabolic rate, Harris–Benedict (revised)"
+      },
+      "description": {
+        "ru": "Пересмотренная версия уравнения Харриса–Бенедикта (Roza & Shizgal, 1984).",
+        "en": "The revised Harris–Benedict equation (Roza & Shizgal, 1984)."
+      },
+      "whenUseful": {
+        "ru": "Для расчёта BMR по пересмотренным уравнениям Харриса–Бенедикта, когда нужна вторая независимая оценка для сравнения.",
+        "en": "When you need a BMR from the revised Harris–Benedict equations as a second independent estimate to compare against."
+      },
+      "methodType": "validated-estimate",
+      "evidenceStrength": "moderate",
+      "sources": [
+        "roza1984"
+      ],
+      "keywords": [
+        "harris",
+        "benedict",
+        "bmr",
+        "харрис",
+        "бенедикт",
+        "базовый обмен",
+        "метаболизм покоя"
+      ],
+      "visualization": "exact",
+      "related": [
+        "mifflin",
+        "tdee",
+        "calorie-target",
+        "observed-tdee"
+      ]
+    },
+    {
+      "id": "rmr-comparison",
+      "category": "energy",
+      "featured": true,
+      "title": {
+        "ru": "Сравнение методов RMR",
+        "en": "RMR method comparison"
+      },
+      "description": {
+        "ru": "Три признанных уравнения расхода покоя рядом — с разбросом, а не одним «точным» числом.",
+        "en": "Three established resting-energy equations side by side — as a range, not one authoritative number."
+      },
+      "whenUseful": {
+        "ru": "Когда нужно увидеть разброс оценок расхода энергии покоя между методами и понять, какой вход сильнее всего влияет на разброс.",
+        "en": "When you want to see how resting-energy estimates diverge between methods and which input drives the spread."
+      },
+      "methodType": "validated-estimate",
+      "evidenceStrength": "moderate",
+      "sources": [
+        "mifflin1990",
+        "roza1984",
+        "cunningham1991"
+      ],
+      "keywords": [
+        "rmr",
+        "сравнение",
+        "mifflin",
+        "harris",
+        "katch",
+        "метаболизм",
+        "bmr comparison"
+      ],
+      "visualization": "comparison",
+      "related": [
+        "mifflin",
+        "tdee",
+        "calorie-target",
+        "observed-tdee"
+      ]
+    },
+    {
+      "id": "macro-planner",
+      "category": "nutrition",
+      "featured": true,
+      "title": {
+        "ru": "Планировщик макросов",
+        "en": "Macro planner"
+      },
+      "description": {
+        "ru": "Раскладка калорий по белку и жиру на кг веса — с проверкой выполнимости.",
+        "en": "Splits calories across protein and fat per kg of weight — with a feasibility check."
+      },
+      "whenUseful": {
+        "ru": "Чтобы распределить известную калорийность по белку и жиру и проверить, что комбинация вообще выполнима.",
+        "en": "To split a known calorie budget across protein and fat and check that the combination is feasible at all."
+      },
+      "methodType": "guideline",
+      "evidenceStrength": "moderate",
+      "sources": [
+        "protein2017"
+      ],
+      "keywords": [
+        "макросы",
+        "бжу",
+        "macro",
+        "macros",
+        "белок",
+        "жир",
+        "углеводы",
+        "protein split"
+      ],
+      "visualization": "composition",
+      "related": [
+        "protein-range",
+        "macro-calories",
+        "carb-remainder",
+        "calorie-density"
+      ]
+    },
+    {
+      "id": "npv",
+      "category": "money",
+      "featured": false,
+      "title": {
+        "ru": "NPV — чистая приведённая стоимость",
+        "en": "NPV — net present value"
+      },
+      "description": {
+        "ru": "Стоимость будущих денежных потоков в сегодняшних деньгах при заданной ставке.",
+        "en": "The value of future cash flows in today's money at a chosen discount rate."
+      },
+      "whenUseful": {
+        "ru": "Когда поток денег растянут по годам и нужно сравнить его ценность в сегодняшних деньгах с вложенной суммой.",
+        "en": "When a cash-flow stream spans years and you need its value in today’s money compared with the invested amount."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "scenario",
+      "related": [
+        "savings-rate",
+        "runway",
+        "compound-interest",
+        "real-return"
+      ]
+    },
+    {
+      "id": "irr",
+      "category": "money",
+      "featured": false,
+      "title": {
+        "ru": "IRR — внутренняя норма доходности",
+        "en": "IRR — internal rate of return"
+      },
+      "description": {
+        "ru": "Ставка, при которой NPV серии потоков равна нулю.",
+        "en": "The rate at which the NPV of a cash-flow series equals zero."
+      },
+      "whenUseful": {
+        "ru": "Когда нужно выразить доходность вложения одной ставкой и сопоставить её с требуемой доходностью.",
+        "en": "When you want an investment return expressed as one rate and compared against your required rate."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [],
+      "visualization": "exact",
+      "related": [
+        "savings-rate",
+        "runway",
+        "compound-interest",
+        "real-return"
+      ]
+    },
+    {
+      "id": "loan-amortization",
+      "category": "money",
+      "featured": false,
+      "title": {
+        "ru": "Кредит: платеж и переплата",
+        "en": "Loan payment and total interest"
+      },
+      "description": {
+        "ru": "Аннуитетный платёж, полная сумма выплат и переплата по процентам.",
+        "en": "Annuity payment, total paid and total interest for a fixed-rate loan."
+      },
+      "whenUseful": {
+        "ru": "Для полной стоимости кредита: платёж, всего выплачено и сколько из этого проценты.",
+        "en": "For the full cost of a loan: the payment, total paid and how much of it is interest."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [
+        "ипотека",
+        "кредит",
+        "mortgage",
+        "loan",
+        "амортизация",
+        "переплата",
+        "interest"
+      ],
+      "visualization": "scenario",
+      "related": [
+        "savings-rate",
+        "runway",
+        "compound-interest",
+        "real-return"
+      ]
+    },
+    {
+      "id": "break-even",
+      "category": "money",
+      "featured": false,
+      "title": {
+        "ru": "Точка безубыточности",
+        "en": "Break-even point"
+      },
+      "description": {
+        "ru": "Сколько единиц по заданной цене и переменным затратам покрывают постоянные расходы.",
+        "en": "How many units at a given price and variable cost cover fixed costs."
+      },
+      "whenUseful": {
+        "ru": "Когда нужно знать, при каком объёме продаж постоянные расходы окупаются.",
+        "en": "When you need to know at what sales volume the fixed costs are covered."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [
+        "точка безубыточности",
+        "break even",
+        "безубыточность",
+        "unit economics",
+        "маржа"
+      ],
+      "visualization": "exact",
+      "related": [
+        "savings-rate",
+        "runway",
+        "compound-interest",
+        "real-return"
+      ]
+    },
+    {
+      "id": "inflation-power",
+      "category": "money",
+      "featured": false,
+      "title": {
+        "ru": "Покупательная способность при инфляции",
+        "en": "Purchasing power under inflation"
+      },
+      "description": {
+        "ru": "Что сумма сможет купить через N лет при постоянной инфляции.",
+        "en": "What a sum will buy in N years at a constant inflation rate."
+      },
+      "whenUseful": {
+        "ru": "Чтобы перевести сегодняшнюю сумму в её покупательную способность через годы при выбранной инфляции.",
+        "en": "To translate today’s amount into its purchasing power years later at a chosen inflation rate."
+      },
+      "methodType": "math",
+      "evidenceStrength": "high",
+      "sources": [],
+      "keywords": [
+        "инфляция",
+        "покупательная",
+        "inflation",
+        "purchasing power",
+        "обесценивание"
+      ],
+      "visualization": "scenario",
+      "related": [
+        "savings-rate",
+        "runway",
+        "compound-interest",
+        "real-return"
       ]
     }
   ]
