@@ -28,7 +28,7 @@ jobs:
 
       - name: Replace target contents with source snapshot
         run: |
-          rsync -a --delete --exclude='.git/' source/ target/
+          rsync -a --delete --exclude='.git/' --exclude='.github/workflows/' source/ target/
           cd target
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
