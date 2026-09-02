@@ -1,11 +1,11 @@
-import { CALCULATORS, calculatorMap } from './calculators.js?v=5.4.0-r4';
-import { REFERENCES } from './references.js?v=5.4.0-r4';
-import { categories, evidenceLabels, methodLabels, l, t, formatNumber, formatUnit } from './i18n.js?v=5.4.0-r4';
-import { getRecommendations } from './recommendations.js?v=5.4.0-r4';
-import { profileKeys } from './validators.js?v=5.4.0-r4';
-import { icon, logo } from './icons.js?v=5.4.0-r4';
-import { DOMAIN_CONTENT, WHEN_USEFUL, confidenceFor, fieldHelp, relatedFor, visualizationType } from './content.js?v=5.4.0-r4';
-import { searchCalculators } from './search.js?v=5.4.0-r4';
+import { CALCULATORS, calculatorMap } from './calculators.js?v=6.0.0-r1';
+import { REFERENCES } from './references.js?v=6.0.0-r1';
+import { categories, evidenceLabels, methodLabels, l, t, formatNumber, formatUnit } from './i18n.js?v=6.0.0-r1';
+import { getRecommendations } from './recommendations.js?v=6.0.0-r1';
+import { profileKeys } from './validators.js?v=6.0.0-r1';
+import { icon, logo } from './icons.js?v=6.0.0-r1';
+import { DOMAIN_CONTENT, WHEN_USEFUL, confidenceFor, fieldHelp, relatedFor, visualizationType } from './content.js?v=6.0.0-r1';
+import { searchCalculators } from './search.js?v=6.0.0-r1';
 
 export const esc=s=>String(s??'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
 const active=(r,p)=>r.page===p?'active':'';

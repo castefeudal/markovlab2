@@ -18,10 +18,10 @@ test('Russian release metadata and PWA shortcuts contain no known English leakag
 });
 
 test('release version is consistent across runtime entry points',()=>{
-  assert.equal(RELEASE_CONFIG.version,'5.4.0');
+  assert.equal(RELEASE_CONFIG.version,'6.0.0');
   assert.equal(JSON.parse(read('package.json')).version,RELEASE_CONFIG.version);
   assert.equal(t('version','ru'),`Версия ${RELEASE_CONFIG.version}`);
-  assert.match(read('sw.js'),/markovlab-v5\.4\.0-/);
+  assert.match(read('sw.js'),/markovlab2-v6\.0\.0-/);
 });
 
 test('generic result boilerplate is replaced for every calculator default result',()=>{
