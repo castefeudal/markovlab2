@@ -179,6 +179,60 @@ export const debtPayoffMonths = (balance, annualRatePct, payment) => {
 };
 export const fireTarget = (annualExpenses, withdrawalPct) => finite(annualExpenses, withdrawalPct) && withdrawalPct > 0 ? annualExpenses / (withdrawalPct / 100) : NaN;
 
+export const harrisBenedictRevised = (sex, weightKg, heightCm, ageYears) => {
+  if (!finite(weightKg, heightCm, ageYears)) return NaN;
+  return sex === 'female'
+    ? 447.593 + 9.247 * weightKg + 3.098 * heightCm - 4.330 * ageYears
+    : 88.362 + 13.397 * weightKg + 4.799 * heightCm - 5.677 * ageYears;
+};
+export const katchMcardle = leanMassKg => finite(leanMassKg) && leanMassKg > 0 ? 370 + 21.6 * leanMassKg : NaN;
+export const lombardi = (loadKg, reps) => finite(loadKg, reps) && reps > 0 ? loadKg * reps ** 0.10 : NaN;
+export const oconner = (loadKg, reps) => finite(loadKg, reps) && reps > 0 ? loadKg * (1 + 0.025 * reps) : NaN;
+export const macroSplit = (calories, weightKg, proteinPerKg, fatPerKg) => {
+  if (!finite(calories, weightKg, proteinPerKg, fatPerKg) || weightKg <= 0) return NaN;
+  const proteinG = proteinPerKg * weightKg, fatG = fatPerKg * weightKg;
+  const remaining = calories - proteinG * 4 - fatG * 9;
+  return { proteinG, fatG, carbsG: Math.max(remaining, 0) / 4, remaining, feasible: remaining >= 0 };
+};
+export const npv = (initialInvestment, ratePct, flows) => {
+  if (!finite(initialInvestment, ratePct) || !Array.isArray(flows) || !flows.length || initialInvestment < 0) return NaN;
+  const r = ratePct / 100;
+  return flows.reduce((s, cf, i) => s + cf / (1 + r) ** (i + 1), 0) - initialInvestment;
+};
+export const irrRates = flows => {
+  if (!Array.isArray(flows) || flows.length < 2 || flows.every(x => x >= 0) || flows.every(x => x <= 0)) return [];
+  const npvAt = r => flows.reduce((s, cf, i) => s + cf / (1 + r) ** i, 0);
+  const roots = [];
+  let prevR = -0.95, prevV = npvAt(prevR);
+  for (let r = -0.945; r <= 10; r += 0.005) {
+    const v = npvAt(r);
+    if (Number.isFinite(prevV) && Number.isFinite(v) && prevV * v < 0) {
+      let lo = prevR, hi = r;
+      for (let k = 0; k < 80; k++) { const mid = (lo + hi) / 2; if (npvAt(lo) * npvAt(mid) <= 0) hi = mid; else lo = mid; }
+      const root = (lo + hi) / 2;
+      if (!roots.some(x => Math.abs(x - root) < 1e-4)) roots.push(root);
+    }
+    prevR = r; prevV = v;
+  }
+  return roots.map(x => x * 100).sort((a, b) => a - b);
+};
+export const breakEven = (fixedCosts, price, variableCost) => {
+  if (!finite(fixedCosts, price, variableCost) || fixedCosts < 0 || price <= 0 || variableCost < 0) return NaN;
+  const contribution = price - variableCost;
+  if (contribution <= 0) return { contribution, marginPct: NaN, units: NaN, revenue: NaN, feasible: false };
+  return { contribution, marginPct: contribution / price * 100, units: fixedCosts / contribution, revenue: fixedCosts / contribution * price, feasible: true };
+};
+export const purchasingPower = (amount, inflationPct, years) => {
+  if (!finite(amount, inflationPct, years) || amount < 0 || years < 0) return NaN;
+  const factor = (1 + inflationPct / 100) ** years;
+  return { realValue: amount / factor, nominalEquivalent: amount * factor, lostPct: (1 - 1 / factor) * 100 };
+};
+export const amortization = (principal, annualRatePct, months) => {
+  if (!finite(principal, annualRatePct, months) || principal <= 0 || months < 1) return NaN;
+  const payment = loanPayment(principal, annualRatePct, months);
+  const totalPaid = payment * months;
+  return { payment, totalPaid, totalInterest: totalPaid - principal };
+};
 export const kgToLb = kg => kg * 2.2046226218;
 export const lbToKg = lb => lb / 2.2046226218;
 export const cmToIn = cm => cm / 2.54;

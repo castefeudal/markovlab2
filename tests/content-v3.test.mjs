@@ -9,7 +9,7 @@ import { DOMAIN_CONTENT,WHEN_USEFUL,confidenceFor,fieldHelp,relatedFor,visualiza
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 
 test('all registered calculators have individualized completion content',()=>{
-  assert.equal(CALCULATORS.length,86);
+  assert.equal(CALCULATORS.length,97);
   for(const calc of CALCULATORS){
     assert.ok(WHEN_USEFUL[calc.id]?.ru?.length>35,`${calc.id}: RU when useful`);
     assert.ok(WHEN_USEFUL[calc.id]?.en?.length>35,`${calc.id}: EN when useful`);

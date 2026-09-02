@@ -24,7 +24,7 @@ test('first visit is search-first and exposes product meaning without a profile 
 
 test('library renders real entry points and all nine laboratory links',()=>{
   const html=calculatorsPage(state);
-  assert.match(html,/86 ИНСТРУМЕНТОВ/);
+  assert.match(html,/97 ИНСТРУМЕНТОВ/);
   assert.equal((html.match(/href="#category\//g)||[]).length,9);
   for(const id of ['bmi','tdee','navy-body-fat','e1rm','pace','real-return'])assert.match(html,new RegExp(`#calc/${id}`));
 });

@@ -41,7 +41,7 @@ test('generic result boilerplate is replaced for every calculator default result
 test('calculator completeness matrix contains every stable calculator ID',()=>{
   const matrix=read('docs/CALCULATOR_COMPLETENESS_MATRIX.md');
   for(const calc of CALCULATORS)assert.equal(matrix.includes(`| \`${calc.id}\` |`),true,`${calc.id}: missing matrix row`);
-  assert.match(matrix,/Итого: \*\*86 калькуляторов из 86\*\*/);
+  assert.match(matrix,/Итого: \*\*97 калькуляторов из 97\*\*/);
 });
 
 test('internal result units have a Russian release label',()=>{
