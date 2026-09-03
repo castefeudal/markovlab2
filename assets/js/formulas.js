@@ -186,6 +186,10 @@ export const harrisBenedictRevised = (sex, weightKg, heightCm, ageYears) => {
     : 88.362 + 13.397 * weightKg + 4.799 * heightCm - 5.677 * ageYears;
 };
 export const katchMcardle = leanMassKg => finite(leanMassKg) && leanMassKg > 0 ? 370 + 21.6 * leanMassKg : NaN;
+// Cunningham (1980): RMR = 500 + 22 x LBM. Distinct from the Katch-McArdle /
+// Cunningham-1991 form (370 + 21.6 x LBM); provenance kept separate on purpose.
+export const cunningham1980 = ffmKg => finite(ffmKg) && ffmKg > 0 ? 500 + 22 * ffmKg : NaN;
+
 export const lombardi = (loadKg, reps) => finite(loadKg, reps) && reps > 0 ? loadKg * reps ** 0.10 : NaN;
 export const oconner = (loadKg, reps) => finite(loadKg, reps) && reps > 0 ? loadKg * (1 + 0.025 * reps) : NaN;
 export const macroSplit = (calories, weightKg, proteinPerKg, fatPerKg) => {
