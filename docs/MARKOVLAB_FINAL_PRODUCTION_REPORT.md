@@ -26,3 +26,21 @@ Date: 3 September 2026 · Release: **6.0.0** · main: `ca8b164` (merge of PR #1 
 ## Not available in this environment
 
 - Forced-offline reload of production, installed-PWA update flow on a real device, physical iOS/Android, 200/400% zoom pass and screen readers were not available and are not marked passed.
+
+## Release 6.0.0-r2 (4 September 2026)
+
+main: `9b5efe0` (merge of PR #5 from `hermes/markovlab2-ultimate-production`). Deploy run 33926416597 succeeded.
+
+- **E2E browser gate (new):** `tests/e2e-browser.mjs` drives the real build in headless Chromium: RU default per browser locale with EN switch persistence, command-palette search → calculator flow, required-field validation without phantom results, save-to-history across reload, theme switching, zero console errors, zero external runtime requests, and an axe-core audit (0 serious/critical violations on calculator, overview and profile pages).
+- **Fixed release-stamp drift:** `renderers-v3.js` still imported `pro.js?v=6.0.0-r1` after revision bumps; `apply-release.mjs` now rewrites all module imports, so SW cache, `?v=` params and imports move in lockstep (enforced by test).
+- **Deploy workflow repaired:** stray orphaned step removed.
+- **Semantic contract (PR #3):** `rmr-comparison` Katch–McArdle row now computes only when body fat is provided (no hidden 20% default) and the formula row matches the math (370 + 21.6 × LBM); macro planner separates grams from kcal.
+- **i18n (PR #4):** remaining measurement units (W, W/kg, in, mi, kJ, lb, h:mm, kcal/100g, mL/kg/min, units) get Russian release labels.
+- **SEO landing pages (PR #2):** 98 crawlable calculator pages under `/calculators/<id>/` with canonical, JSON-LD SoftwareApplication, formulas, limitations, related tools; sitemap has 99 URLs.
+- **Production verification r2:** live `sw.js` reports cache `markovlab2-v6.0.0-r2`; `renderers-v3.js` served with `pro.js?v=6.0.0-r2`; homepage, `#calc/cunningham`, SEO pages, robots, sitemap, both manifests and 404 all return 200 in a real browser with no console errors.
+
+## Gates summary
+
+- `npm test`: 136/136 pass.
+- `node tests/e2e-browser.mjs`: ALL PASS (11 checks + axe).
+- CI (test workflow): green on every PR; Pages deploy: green on every merge to main.
