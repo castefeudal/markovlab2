@@ -10,6 +10,13 @@
     "build:data": "node scripts/build-data.mjs",
     "docs:matrix": "node scripts/build-completeness-matrix.mjs",
     "release:metadata": "node scripts/apply-production-url.mjs",
-    "verify": "npm test && npm run docs:matrix"
+    "verify": "npm test && npm run docs:matrix",
+    "test:e2e": "node tests/e2e-browser.mjs",
+    "build": "node scripts/build-dist.mjs",
+    "check:generated": "npm run build:data && npm run docs:matrix && node scripts/build-seo-pages.mjs && git diff --exit-code"
+  },
+  "devDependencies": {
+    "axe-core": "^4.11.0",
+    "playwright-core": "^1.62.1"
   }
 }

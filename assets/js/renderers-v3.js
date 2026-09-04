@@ -1,13 +1,13 @@
-import * as legacy from './renderers.js?v=6.0.0-r1';
-import { CALCULATORS, calculatorMap } from './calculators.js?v=6.0.0-r1';
-import { REFERENCES } from './references.js?v=6.0.0-r1';
-import { categories, evidenceLabels, methodLabels, l, t, formatNumber, formatUnit } from './i18n.js?v=6.0.0-r1';
-import { icon, logo } from './icons.js?v=6.0.0-r1';
-import { DOMAIN_CONTENT, WHEN_USEFUL, applyResultGuidance, confidenceFor, fieldHelp, relatedFor, visualizationType } from './content.js?v=6.0.0-r1';
-import { searchCalculators as legacySearchFn } from './search.js?v=6.0.0-r1';
-import { RELEASE_CONFIG } from './config.js?v=6.0.0-r1';
-import { WORKFLOWS, activeWorkflowStep, loadWorkflowRun, workflowMap } from './workflows.js?v=6.0.0-r1';
-import { getProConfig } from './pro.js?v=6.0.0-r1';
+import * as legacy from './renderers.js?v=6.0.0-r2';
+import { CALCULATORS, calculatorMap } from './calculators.js?v=6.0.0-r2';
+import { REFERENCES } from './references.js?v=6.0.0-r2';
+import { categories, evidenceLabels, methodLabels, l, t, formatNumber, formatUnit } from './i18n.js?v=6.0.0-r2';
+import { icon, logo } from './icons.js?v=6.0.0-r2';
+import { DOMAIN_CONTENT, WHEN_USEFUL, applyResultGuidance, confidenceFor, fieldHelp, relatedFor, visualizationType } from './content.js?v=6.0.0-r2';
+import { searchCalculators as legacySearchFn } from './search.js?v=6.0.0-r2';
+import { RELEASE_CONFIG } from './config.js?v=6.0.0-r2';
+import { WORKFLOWS, activeWorkflowStep, loadWorkflowRun, workflowMap } from './workflows.js?v=6.0.0-r2';
+import { getProConfig } from './pro.js?v=6.0.0-r2';
 
 const bi=(ru,en,lang)=>lang==='ru'?ru:en;
 const esc=legacy.esc;
