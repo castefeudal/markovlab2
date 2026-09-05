@@ -29,8 +29,9 @@ createServer((request, response) => {
   const pathname = decodeURIComponent(new URL(request.url, 'http://localhost').pathname);
   const safePath = normalize(pathname).replace(/^(\.\.(\/|\\|$))+/, '');
   let filePath = join(root, safePath === '/' ? 'index.html' : safePath);
-  const looksLikeFile = extname(safePath) !== '' || safePath.startsWith('/docs/');
-  if (!filePath.startsWith(root) || !existsSync(filePath) || statSync(filePath).isDirectory()) {
+  const looksLikeFile = extname(safePath) !== '' || safePath.startsWith('/docs/') || safePath.startsWith('/calculators/') || safePath.startsWith('/assets/');
+  if (existsSync(filePath) && statSync(filePath).isDirectory()) filePath = join(filePath, 'index.html');
+  if (!filePath.startsWith(root) || !existsSync(filePath)) {
     if (looksLikeFile) {
       response.statusCode = 404;
       response.end('Not found');
