@@ -16,6 +16,9 @@ const mime = {
   '.ico': 'image/x-icon',
   '.js': 'text/javascript; charset=utf-8',
   '.json': 'application/json; charset=utf-8',
+  '.md': 'text/markdown; charset=utf-8',
+  '.xml': 'application/xml; charset=utf-8',
+  '.txt': 'text/plain; charset=utf-8',
   '.png': 'image/png',
   '.svg': 'image/svg+xml',
   '.webmanifest': 'application/manifest+json; charset=utf-8',
@@ -26,7 +29,14 @@ createServer((request, response) => {
   const pathname = decodeURIComponent(new URL(request.url, 'http://localhost').pathname);
   const safePath = normalize(pathname).replace(/^(\.\.(\/|\\|$))+/, '');
   let filePath = join(root, safePath === '/' ? 'index.html' : safePath);
-  if (!filePath.startsWith(root) || !existsSync(filePath) || statSync(filePath).isDirectory()) {
+  const looksLikeFile = extname(safePath) !== '' || safePath.startsWith('/docs/') || safePath.startsWith('/calculators/') || safePath.startsWith('/assets/');
+  if (existsSync(filePath) && statSync(filePath).isDirectory()) filePath = join(filePath, 'index.html');
+  if (!filePath.startsWith(root) || !existsSync(filePath)) {
+    if (looksLikeFile) {
+      response.statusCode = 404;
+      response.end('Not found');
+      return;
+    }
     filePath = join(root, 'index.html');
   }
   response.setHeader('Content-Type', mime[extname(filePath)] || 'application/octet-stream');
